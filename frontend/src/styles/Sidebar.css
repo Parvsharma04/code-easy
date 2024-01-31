@@ -1,0 +1,28 @@
+.sidebar{
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0 30px;
+}
+.btn{
+    background-color: #c40c0c;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+.btn:hover{
+    background-color: #e63535;
+    border-radius: 10px;
+}
+input{
+    width: -webkit-fill-available;
+    font-size: medium;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+input:hover{
+    background-color: #e9ecef;
+}

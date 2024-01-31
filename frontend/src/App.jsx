@@ -3,9 +3,9 @@ import Navbar from "./Components/Navbar";
 import Team from "./Components/Team";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Demo from './Components/Demo'
-
+import Framework from "./Components/Framework";
+  
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
   const [theme, settheme] = useState(current_theme ? current_theme : "light");
@@ -21,6 +21,7 @@ const App = () => {
         <Route path="/team" element={<Team />}/>
         <Route path="/packages" element={<Demo />}/>
         <Route path="/register" element={<Login />}/>
+        <Route path="/framework" element={<Framework />}/>
       </Routes>
     </div>
   );

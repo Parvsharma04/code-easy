@@ -4,11 +4,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
-
+import Navbar from "./Navbar"
 
 const Team = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <section>
         <div className="row">
           <h1>Our Team</h1>
@@ -107,11 +108,8 @@ const Team = () => {
             </div>
           </div>
         </div>
-       
       </section>
-      
-
-    </div>
+    </>
   );
 };
 

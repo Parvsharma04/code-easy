@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Sidebar.css";
+import NavbarDocs from "./NavbarDocs";
 
 const Sidebar = () => {
   return (
-    <div>
       <div className="w-64 bg-gray-50 border-r border-gray-200 sidebar">
         <div className="mb-10 mt-10 flex justify-center items-center">
             <input type="text" className="rounded" placeholder="Quick Search" />
@@ -34,7 +34,6 @@ const Sidebar = () => {
             Progress bar
           </a>
         </div>
-      </div>
     </div>
   );
 };

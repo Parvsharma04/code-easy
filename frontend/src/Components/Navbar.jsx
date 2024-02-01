@@ -33,7 +33,7 @@ const Navbar = ({ theme, settheme }) => {
     <div className="navbar">
       <div className="left">
         <h2 className={theme == "light" ? logo_light : logo_dark}>Codeeasy</h2>
-        <ul>
+        <ul id="nav-ul">
           <a href="/">
             <li>Home</li>
           </a>

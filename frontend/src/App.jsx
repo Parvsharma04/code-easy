@@ -8,7 +8,8 @@ import Packages from "./Components/Packages";
 import Footer from "./Components/Footer"
 import NavbarDocs from "./Components/NavbarDocs";
 import FormDocs from "./Components/FormDocs";
-  
+// import Accordion from "./Components/Accordion";
+
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
   const [theme, settheme] = useState(current_theme ? current_theme : "light");
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/framework/navbar" element={<NavbarDocs />}/>
         <Route path="/framework/form" element={<FormDocs />}/>
       </Routes>
+     
       <Footer />
     </div>
   );

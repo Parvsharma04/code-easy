@@ -1,10 +1,29 @@
-import React from "react";
-import "../styles/NavbarDocs.css";
+import React, { useRef } from "react";
 import Navbar from "./Navbar";
-import "../styles/Framework.css"
+import "../styles/NavbarDocs.css";
+import "../styles/Framework.css";
 import Sidebar from "./Sidebar";
+import NavbarComponent from "../FrameworkComponent/NavbarComponent";
 
 const NavbarDocs = () => {
+  const codeRef = useRef(null);
+
+  const handleCopyToClipboard = () => {
+    const codeElement = codeRef.current;
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    try {
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      alert("Code copied to clipboard!");
+    } catch (error) {
+      console.error("Copy to clipboard failed:", error);
+    }
+  };
+
   return (
     <div className="framework">
       <Navbar />
@@ -41,7 +60,7 @@ const NavbarDocs = () => {
             </ul>
           </div>
 
-          <div className="variant1">
+          <div className="variant1 mb-5">
             <h2 className="mb-1">Navigating Brilliance</h2>
             <p>
               Unleashing the power of our navbar component. Following is the
@@ -176,55 +195,105 @@ const NavbarDocs = () => {
               </li>
             </ul>
             <div className="render">
-              {/* <Navbar /> */}
-              <span>navbar</span>
-              {/* <pre>
-                        <div className="htmlCode">
-                            <nav>
-                                <div class="primary-nav">
-                                    <div class="primary-nav-logo">
-                                        <h3>Codeeasy</h3>
-                                    </div>
-                                    <div class="primary-nav-link">
-                                        <ul>
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="secondary-nav"> 
-                                    <input type="text" class="secondary-nav-searchbar">
-                                    <button class="secondary-nav-searchbtn nav-btnFont">Search</button>
-                                    <li class="nav-item">
-                                        <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked>
-                                    </li>
-                                </div>
-                                <div class="hamburger">
-                                    <button id="btn"><i class="fas fa-bars"></i></button>
-                                </div>                    
-                            </nav>
-                            <div id="hamburger-menu" >
-                                <ul>
-                                    <li><a style="background: rgb(111, 92, 182)" class="hamburger-content" href="#">Home</a></li>
-                                    <li><a style="background: rgb(111, 92, 182)" class="hamburger-content" href="#">About</a></li>
-                                    <li><a style="background: rgb(111, 92, 182)" class="hamburger-content" href="#">Contact</a></li>
-                                    <li>
-                                        <div style="background: rgb(111, 92, 182)" class="hamburger-content serach-container">
-                                            <input type="text" class="serach-container-input">
-                                            <button class="serach-container-btn nav-btnFont">Search</button>
-                                        </div>
-                                    </li>   
-                                    <li style="background: rgb(111, 92, 182); padding: 10px 5px;" class="nav-item hamburger-content" id="togglebtn">
-                                        <input type="checkbox" id="dark_toggler themeChanger2" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </pre> */}
+              <div className="nav-up">
+                <NavbarComponent />
+              </div>
+                <hr />
+                <div className="type">
+                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
+                </div>
+                <hr />
+                <div className="down">                
+                  <pre ref={codeRef}>
+                    <code>                  
+{`<nav>
+  <div class="primary-nav">
+    <div class="primary-nav-logo">
+      <h3>Codeeasy</h3>
+    </div>
+    <div class="primary-nav-link">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="secondary-nav">
+    <input type="text" class="secondary-nav-searchbar" />
+    <button class="secondary-nav-searchbtn nav-btnFont">Search</button>
+    <li class="nav-item">
+      <input
+        type="checkbox"
+        id="dark_toggler"
+        class="dark_toggler"
+        aria-label="Toggle Light Mode"
+        onclick="toggle_light_mode()"
+        checked
+      />
+    </li>
+  </div>
+  <div class="hamburger">
+    <button id="btn"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div id="hamburger-menu">
+  <ul>
+    <li>
+      <a
+        style="background: rgb(111, 92, 182)"
+        class="hamburger-content"
+        href="#"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        style="background: rgb(111, 92, 182)"
+        class="hamburger-content"
+        href="#"
+        >About</a
+      >
+    </li>
+    <li>
+      <a
+        style="background: rgb(111, 92, 182)"
+        class="hamburger-content"
+        href="#"
+        >Contact</a
+      >
+    </li>
+    <li>
+      <div
+        style="background: rgb(111, 92, 182)"
+        class="hamburger-content serach-container"
+      >
+        <input type="text" class="serach-container-input" />
+        <button class="serach-container-btn nav-btnFont">Search</button>
+      </div>
+    </li>
+    <li
+      style="background: rgb(111, 92, 182); padding: 10px 5px"
+      class="nav-item hamburger-content"
+      id="togglebtn"
+    >
+      <input
+        type="checkbox"
+        id="dark_toggler themeChanger2"
+        class="dark_toggler"
+        aria-label="Toggle Light Mode"
+        onclick="toggle_light_mode()"
+        checked
+      />
+    </li>
+  </ul>
+</div>
+</nav>`}
+                    </code>
+                  </pre>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

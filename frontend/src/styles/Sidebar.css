@@ -2,8 +2,9 @@
     height: 82vh;
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: auto;
     padding: 0 30px;
+    width: 30%;
 }
 .btn{
     background-color: #c40c0c;

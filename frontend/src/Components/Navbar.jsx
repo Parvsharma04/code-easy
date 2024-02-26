@@ -22,17 +22,20 @@ const Navbar = ({ theme, settheme }) => {
       right.style.display = "flex";
       right.style.justifyContent = "center";
       right.style.alignItems = "center";
+      right.style.padding = "13px 0";
+      navbar.style.flexDirection = "column"
     }
     else{
       right.style.display = "none"
+      navbar.style.flexDirection = "row"
     }
-    left_ul.style.display = left_ul.style.display === "none" ? "block" : "none";
+    left_ul.style.display = left_ul.style.display === "none" ? "flex" : "none";
   }
 
   return (
     <div className="navbar">
       <div className="left">
-        <h2 className={theme == "light" ? logo_light : logo_dark}>Codeeasy</h2>
+        <h2 id="nav-logo" className={theme == "light" ? logo_light : logo_dark}>Codeeasy</h2>
         <ul id="nav-ul">
           <a href="/">
             <li>Home</li>

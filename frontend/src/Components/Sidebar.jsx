@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Sidebar.css";
-import NavbarDocs from "./NavbarDocs";
 
 const Sidebar = () => {
   return (
@@ -28,10 +27,22 @@ const Sidebar = () => {
             Form
           </a>
           <a
+            href="/framework/accordian"
+            className="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group"
+          >
+            Accordian
+          </a>
+          <a
             href="/framework/progressBar"
             className="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group"
           >
             Progress bar
+          </a>
+          <a
+            href="/framework/spinners"
+            className="flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group"
+          >
+            Spinners
           </a>
         </div>
     </div>

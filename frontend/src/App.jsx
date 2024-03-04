@@ -8,11 +8,8 @@ import Packages from "./Components/Packages";
 import Footer from "./Components/Footer"
 import NavbarDocs from "./Components/NavbarDocs";
 import FormDocs from "./Components/FormDocs";
-import ProgressBarDocs from "./Components/ProgressBarDocs";
-import AccordianDocs from "./Components/AccordianDocs";
-import LandingPage from "./Components/LandingPage";
-import SpinnerDocs from "./Components/SpinnerDocs";
-  
+// import Accordion from "./Components/Accordion";
+
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
   const [theme, settheme] = useState(current_theme ? current_theme : "light");
@@ -24,18 +21,16 @@ const App = () => {
   return (
     <div className={`${theme}`}>
       <Routes>
-        <Route path="/" element={<LandingPage theme={theme} settheme={settheme}/>}/>
+        <Route path="/" element={<Navbar theme={theme} settheme={settheme}/>}/>
         <Route path="/team" element={<Team />}/>
         <Route path="/packages" element={<Packages />}/>
         <Route path="/register" element={<Login />}/>
         <Route path="/framework" element={<Framework />}/>
         <Route path="/framework/navbar" element={<NavbarDocs />}/>
         <Route path="/framework/form" element={<FormDocs />}/>
-        <Route path="/framework/progressbar" element={<ProgressBarDocs />}/>
-        <Route path="/framework/accordian" element={<AccordianDocs />}/>
-        <Route path="/framework/spinners" element={<SpinnerDocs />}/>
       </Routes>
-      {/* <Footer /> */}
+     
+      <Footer />
     </div>
   );
 };

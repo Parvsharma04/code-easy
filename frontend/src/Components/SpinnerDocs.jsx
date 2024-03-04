@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import "../styles/SpinnerDocs.css";
 import Navbar from "./Navbar";
 import "../styles/Framework.css"
-import Sidebar from "./Sidebar";
+import {Sidebar} from "./Sidebar";
 import Spinners from "./Spinner1";
 import Spinners2 from "./Spinner2";
 import Shapespinners from "./Spinner3";
@@ -32,7 +32,7 @@ const SpinnerDocs = () => {
         <Sidebar />
         <div className="container">
           <div className="heading">
-            <h1>Spinner</h1>
+            <h1 id="title">Spinner</h1>
             <p>
             The spinner component is used to indicate a loading status of the content that you're fetching from your database 
             </p>

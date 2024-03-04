@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import "../styles/FormDocs.css";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import {Sidebar} from "./Sidebar";
 import "../styles/Framework.css";
 import BasicFormComponent from "../FrameworkComponent/BasicFormComponent";
 import SignUpComponent from "../FrameworkComponent/SignUpComponent";
@@ -33,7 +33,7 @@ const FormDocs = () => {
         <Sidebar />
         <div className="container">
           <div className="heading">
-            <h1>Forms</h1>
+            <h1 id="title">Forms</h1>
             <h2>
               A form is an essential part of a website that allows users to
               input and submit data for various purposes.

@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import "../styles/FormDocs.css";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
+import {Sidebar} from "./Sidebar";
 import "../styles/Framework.css";
 import "../styles/AccordionDocs.css"
 import AccordianComponent from '../FrameworkComponent/AccordianComponent';
@@ -35,7 +35,7 @@ const AccordianDocs = () => {
       <Sidebar />
       <div className="container">
           <div className="heading">
-            <h1>Accordion</h1>
+            <h1 id='title'>Accordion</h1>
             <p>
         Accordion is a user interface element, often used in web development, where sections of content can expand or collapse with user interaction
             </p>

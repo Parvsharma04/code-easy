@@ -1,9 +1,12 @@
-import React, {useRef} from 'react'
-import Navbar from './Navbar'
-import Sidebar from './Sidebar'
+import React, { useRef } from "react";
+import Navbar from "./Navbar";
+import {Sidebar} from "./Sidebar";
+import DynamicProgressBar from "../FrameworkComponent/DynamicProgressBar";
+import StaticWPercentage from "../FrameworkComponent/StaticWPercentage";
+import StaticProgressBar from "../FrameworkComponent/StaticProgressBar";
+// import '../styles/ProgressBarDocs.css'
 
 const ProgressBarDocs = () => {
-
   const codeRef = useRef(null);
 
   const handleCopyToClipboard = () => {
@@ -29,191 +32,132 @@ const ProgressBarDocs = () => {
         <Sidebar />
         <div className="container">
           <div className="heading">
-            <h1>Navbar</h1>
+            {/* <p className="font-bold text-xl text-center pt-10">Progress Bar with Input</p> */}
+            <h1 id="title">Progress Bar With Input</h1>
+          </div>
+          <br />
+          <div className="description pl-7 pr-7">
+            <h2 className="font-bold text-lg">Overview: </h2>
             <p>
-              A navigation bar is a link to appropriate section/pages in a
-              website that helps reader in traversing the online document
+              The Progress Bar with Input is a user interface component designed
+              to visually represent the progress of a task while allowing users
+              to provide input. It's a versatile element that combines progress
+              tracking with user interaction.
             </p>
           </div>
-          <div className="description">
-            <h2 className="mb-1">How it works ?</h2>
-            <ul>
-              <li id="desc">
-                For using a navbar you are required to wrap all the elements in
-                the div under the class name '.navbar' for responsiveness
-              </li>
-              <li id="desc">
-                class name '.left' places your logo and navigation links to the
-                leftside for your navbar but make sure your root class includes
-                '.navbar'
-              </li>
-              <li id="desc">
-                class name '.right' contains searchbar, login and toggle
-                functionalities which will be aligned right to the screen
-              </li>
-              <li id="desc">
-                When the max-width of your screen is 400px, the class hamburger
-                will collaspe the navigation functionalities
-              </li>
-            </ul>
-          </div>
 
-          <div className="variant1">
-            <h2 className="mb-1">Navigating Brilliance</h2>
-            <p>
-              Unleashing the power of our navbar component. Following is the
-              description of each and everything :-
-            </p>
-            <ul>
-              <h3>Primary Navigation Section:</h3>
-              <li>
-                .primary-nav: Represents the primary navigation container.
-              </li>
-              <li>
-                .primary-nav-logo: Container for the logo within the primary
-                navigation.
-              </li>
-              <li>
-                .primary-nav-logo h3: Styling for the logo text within the
-                primary navigation.
-              </li>
-              <li>
-                .primary-nav-link: Container for the primary navigation links.
-              </li>
-              <li>
-                .primary-nav-link ul li: Styling for the list items within the
-                primary navigation links.
-              </li>
-              <li>
-                .primary-nav-link ul a: Styling for the anchor tags within the
-                primary navigation links.
-              </li>
-
-              <h3>Secondary Navigation Section:</h3>
-              <li>
-                .secondary-nav: Represents the secondary navigation container.
-              </li>
-              <li>
-                .secondary-nav-searchbar: Styling for the search bar in the
-                secondary navigation.
-              </li>
-              <li>
-                .secondary-nav-searchbtn: Styling for the search button in the
-                secondary navigation.
-              </li>
-              <li>.dark_toggler: Styling for the dark mode toggle checkbox.</li>
-              <li>.hamburger: Represents the hamburger menu container.</li>
-              <li>
-                .hamburger #btn: Styling for the button inside the hamburger
-                menu.
-              </li>
-
-              <h3>Hamburger Menu Section:</h3>
-              <li>#hamburger-menu: Container for the hamburger menu.</li>
-              <li>
-                #hamburger-menu ul: Styling for the unordered list inside the
-                hamburger menu.
-              </li>
-              <li>
-                #hamburger-menu ul a: Styling for the anchor tags within the
-                hamburger menu links.
-              </li>
-              <li>
-                #hamburger-menu .serach-container: Styling for the search
-                container within the hamburger menu.
-              </li>
-              <li>
-                #hamburger-menu #serach-container-btn: Styling for the search
-                button within the hamburger menu.
-              </li>
-
-              <h3>Media Queries:</h3>
-              <li>
-                Media Queries:
-                <p>
-                  Media queries are used for responsive design, adjusting styles
-                  based on screen width.
-                </p>
-              </li>
-
-              <h3>Dark Mode Toggle:</h3>
-              <li>.dark_toggler: Styling for the dark mode toggle switch.</li>
-              <li>
-                .dark_toggler:before: Styling for the toggle switch button.
-              </li>
-              <li>
-                .dark_toggler:checked: Styling when the dark mode is activated.
-              </li>
-
-              <h3>JavaScript Interaction:</h3>
-              <li>
-                JavaScript Interaction:
-                <p>
-                  .makeVisible: Class added dynamically to make the hamburger
-                  menu visible.
-                </p>
-                <p>
-                  .dark-theme: Class added dynamically to the navigation when in
-                  dark mode.
-                </p>
-                <p>
-                  .hamburger-content: Class applied to elements in the hamburger
-                  menu for styling.
-                </p>
-              </li>
-
-              <h3>JavaScript Variables:</h3>
-              <li>
-                JavaScript Variables:
-                <p>const nav: Represents the navigation element.</p>
-                <p>const hamburger: Represents the hamburger button.</p>
-                <p>
-                  const hamburgerMenu: Represents the hamburger menu element.
-                </p>
-                <p>
-                  const hamburgerContent: Represents elements with the class
-                  'hamburger-content' (array).
-                </p>
-              </li>
-
-              <h3>JavaScript Functions:</h3>
-              <li>
-                JavaScript Functions:
-                <p>
-                  toggleMenu(): Toggles the visibility of the hamburger menu.
-                </p>
-                <p>
-                  toggle_light_mode(): Toggles between light and dark modes.
-                </p>
-                <p>applyLightMode(): Applies the chosen light or dark mode.</p>
-                <p>
-                  reloadPageIfGreaterThan615(): Reloads the page if the window
-                  width is greater than 615 pixels.
-                </p>
-              </li>
-            </ul>
+          <div className="variant1 pl-7 pr-7">
+            <br />
+          <h1 className="text-left font-bold">Dynamic: </h1>
             <div className="render">
-              <div className="up">
-                {/* <NavbarComponent /> */}
+              <div>{ < DynamicProgressBar/> }</div>
+              <br />
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
               </div>
-                <hr />
-                <div className="type">
-                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
-                </div>
-                <hr />
-                <div className="down">                
-                  <pre ref={codeRef}>
-                    <code>                  
-    {``}
-                    </code>
-                  </pre>
+
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>{`<div>
+      <div class="container">
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+      </div>
+  
+      <div class="container2">
+        <label for="percentageInput">Enter Percentage: </label>
+        <input
+          type="number"
+          id="percentageInput"
+          min="0"
+          max="100"
+          oninput="updateProgressBar(this.value)"
+        />
+      </div>
+    </div>`}</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div className="variant2 pl-7 pr-7">
+            <br />
+          <h1 className="text-left font-bold">Static With Percentage Counter: </h1>
+            <div className="render">
+              <div>{ < StaticWPercentage/> }</div>
+              <br />
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>{`<div class="container">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div class="container2">
+        <label for="percentageInput">Enter Percentage: </label>
+        <input
+          type="number"
+          id="percentageInput"
+          min="0"
+          max="100"
+          oninput="updateProgressBar(this.value)"
+        />
+      </div>`}</code>
+                </pre>
+              </div>
+            </div>
+          </div>
+          <div className="variant3 pl-7 pr-7 pb-7">
+            <br />
+          <h1 className="text-left font-bold">Static: </h1>
+            <div className="render">
+              <div>{ < StaticProgressBar/> }</div>
+              <br />  
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>{`<div class="container">
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div class="container2">
+        <label for="percentageInput">Enter Percentage: </label>
+        <input
+          type="number"
+          id="percentageInput"
+          min="0"
+          max="100"
+          oninput="updateProgressBar(this.value)"
+        />
+      </div>`}</code>
+                </pre>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProgressBarDocs
+export default ProgressBarDocs;

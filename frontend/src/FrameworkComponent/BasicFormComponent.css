@@ -50,7 +50,7 @@ input[type="submit"]{
     align-items: center;
 }
 .btn{
-    background-color: #c40c0c;
+    background-color: #c40c0c !important;
     color: white;
     padding: 10px;
     border-radius: 3px;

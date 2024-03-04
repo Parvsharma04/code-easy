@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Navbar from "./Navbar";
 import "../styles/NavbarDocs.css";
 import "../styles/Framework.css";
-import Sidebar from "./Sidebar";
+import {Sidebar} from "./Sidebar";
 import NavbarComponent from "../FrameworkComponent/NavbarComponent";
 
 const NavbarDocs = () => {
@@ -31,7 +31,7 @@ const NavbarDocs = () => {
         <Sidebar />
         <div className="container">
           <div className="heading">
-            <h1>Navbar</h1>
+            <h1 id="title">Navbar</h1>
             <p>
               A navigation bar is a link to appropriate section/pages in a
               website that helps reader in traversing the online document

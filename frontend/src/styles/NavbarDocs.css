@@ -1,8 +1,9 @@
 .container {
-  width: -webkit-fill-available;
+  /* width: -webkit-fill-available; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0 35px;
 }
 .heading {
   display: flex;
@@ -11,8 +12,10 @@
   /* border: 2px solid red; */
   padding: 5px;
 }
-.heading h1 {
+.heading #title {
   text-align: start;
+  font-size: xxx-large;
+  text-align: center;
 }
 .heading p {
   font-size: x-large;
@@ -71,7 +74,7 @@ ul li {
   flex-direction: column;
   height: 13vh !important;
   align-items: center;
-  padding: 125px 50px;
+  padding: 20px 50px;
   flex-direction: column;
 }
 .copy-btn {

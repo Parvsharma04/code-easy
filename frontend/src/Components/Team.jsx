@@ -16,7 +16,7 @@ const Team = () => {
       <Navbar />
       <section>
         <div className="row">
-          <h1>Our Team</h1>
+          <h1 className="font-extrabold text-5xl pt-1">Our Team</h1>
         </div>
         <div className="row">
           <div className="column">

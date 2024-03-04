@@ -1,22 +1,23 @@
 import React from 'react'
 import Navbar from "./Navbar"
-import img1 from'../assets/tailwind-css.jpg'
+import "../styles/Team.css";
+import img1 from'../assets/tailwind.png'
 import img2 from'../assets/csslogo.jpg'
-import img3 from '../assets/materialui.jpg'
+import img3 from '../assets/material.png'
 import img4 from '../assets/codeeasy.jpg'
 
 const Packages = () => {
   return (
     <>
       <Navbar />
-      
       <div>
-      <h1>Packages</h1>
-      <section className="text-gray-400 bg-white body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <br />
+      <h1 className='font-extrabold text-5xl'>Packages</h1>
+      <section className=" bg-white body-font">
+        <div className="container px-5 pt-12 mt-10 mx-auto">
           <div className="flex flex-wrap -m-4">
-            <div className="p-4 md:w-1/4">
-              <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+            <div className="p-4 md:w-1/4 card">
+              <div className="h-full border-2 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={img1} alt="blog"/>
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"></h2>
@@ -40,8 +41,8 @@ const Packages = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+            <div className="p-4 md:w-1/4 card">
+              <div className="h-full border-2 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={img3} alt="blog"/>
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"></h2>
@@ -65,8 +66,8 @@ const Packages = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+            <div className="p-4 md:w-1/4 card">
+              <div className="h-full border-2 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={img4} alt="blog"/>
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"></h2>
@@ -90,8 +91,8 @@ const Packages = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 md:w-1/4">
-              <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+            <div className="p-4 md:w-1/4 card">
+              <div className="h-full border-2 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={img2} alt="blog"/>
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"></h2>

@@ -5,7 +5,7 @@ import "../styles/Framework.css";
 import {Sidebar} from "./Sidebar";
 import NavbarComponent from "../FrameworkComponent/NavbarComponent";
 
-const NavbarDocs = () => {
+const NavbarDocs = ({theme, settheme}) => {
   const codeRef = useRef(null);
 
   const handleCopyToClipboard = () => {
@@ -26,18 +26,22 @@ const NavbarDocs = () => {
 
   return (
     <div className="framework">
-      <Navbar />
+      <Navbar theme={theme} settheme={settheme}/>
       <div className="subContainer">
-        <Sidebar />
-        <div className="container">
-          <div className="heading">
-            <h1 id="title">Navbar</h1>
+        <Sidebar className={"w-1/3"} theme={theme} settheme={settheme}/>
+        <div className={`w-auto container ${theme === "dark"
+                  ? "bg-black text-white"
+                  : "bg-white text-black"}`}>
+          <div className={`heading w-fit `}>
+            <h1 id="title" className={`${theme === "dark"
+                  ? "bg-black text-white"
+                  : "bg-white text-black"}`}>Navbar</h1>
             <p>
               A navigation bar is a link to appropriate section/pages in a
               website that helps reader in traversing the online document
             </p>
           </div>
-          <div className="description">
+          <div className="description w-fit">
             <h2 className="mb-1">How it works ?</h2>
             <ul>
               <li id="desc">
@@ -60,13 +64,13 @@ const NavbarDocs = () => {
             </ul>
           </div>
 
-          <div className="variant1 mb-5">
+          <div className="variant1 mb-5 w-fit">
             <h2 className="mb-1">Navigating Brilliance</h2>
             <p>
               Unleashing the power of our navbar component. Following is the
               description of each and everything :-
             </p>
-            <ul>
+            <ul className="w-fit">
               <h3>Primary Navigation Section:</h3>
               <li>
                 .primary-nav: Represents the primary navigation container.
@@ -194,16 +198,16 @@ const NavbarDocs = () => {
                 </p>
               </li>
             </ul>
-            <div className="render">
-              <div className="nav-up">
+            <div className="render w-fit">
+              <div className="nav-up w-fit">
                 <NavbarComponent />
               </div>
                 <hr />
-                <div className="type">
+                <div className="type w-fit">
                   <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
                 </div>
                 <hr />
-                <div className="down">                
+                <div className="down w-fit">                
                   <pre ref={codeRef}>
                     <code>                  
 {`<nav>

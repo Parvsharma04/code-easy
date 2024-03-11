@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Components/Navbar";
 import Team from "./Components/Team";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";
@@ -25,15 +24,15 @@ const App = () => {
     <div className={`${theme}`}>
       <Routes>
         <Route path="/" element={<LandingPage theme={theme} settheme={settheme}/>}/>
-        <Route path="/team" element={<Team />}/>
-        <Route path="/packages" element={<Packages />}/>
-        <Route path="/register" element={<Login />}/>
-        <Route path="/framework" element={<Framework />}/>
-        <Route path="/framework/navbar" element={<NavbarDocs />}/>
-        <Route path="/framework/form" element={<FormDocs />}/>
-        <Route path="/framework/progressbar" element={<ProgressBarDocs />}/>
-        <Route path="/framework/accordian" element={<AccordianDocs />}/>
-        <Route path="/framework/spinners" element={<SpinnerDocs />}/>
+        <Route path="/team" element={<Team theme={theme} settheme={settheme}/>}/>
+        <Route path="/packages" element={<Packages theme={theme} settheme={settheme}/>}/>
+        <Route path="/register" element={<Login theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework" element={<Framework theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework/navbar" element={<NavbarDocs theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework/form" element={<FormDocs theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework/progressbar" element={<ProgressBarDocs theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework/accordian" element={<AccordianDocs theme={theme} settheme={settheme}/>}/>
+        <Route path="/framework/spinners" element={<SpinnerDocs theme={theme} settheme={settheme}/>}/>
       </Routes>
       {/* <Footer /> */}
     </div>

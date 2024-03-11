@@ -312,31 +312,31 @@ window.addEventListener('resize', reloadPageIfGreaterThan615);
 
 //progress-bar-v1
 
-function updateProgressBar(value) {
-    const progressBar = document.getElementById('progress-bar');
-    const progress = document.getElementById('progress-container');
-    progressBar.style.width = value + '%';
+function updateProgressBarDynamic(value) {
+    const progressBarDynamic = document.getElementById('progress-bar-dynamic');
+    const progressDynamic = document.getElementById('progress-container-dynamic');
+    progressBarDynamic.style.width = value + '%';
     if (value < 30) {
-      progressBar.style.backgroundColor = "red";
-      progress.style.borderColor = "red";
+      progressBarDynamic.style.backgroundColor = "red";
+      progressDynamic.style.borderColor = "red";
     } else if (value >= 30 && value < 60) {
-      progressBar.style.backgroundColor = "orange";
-      progress.style.borderColor = "orange";
+      progressBarDynamic.style.backgroundColor = "orange";
+      progressDynamic.style.borderColor = "orange";
     } else if (value >= 60 && value <= 80) {
-      progressBar.style.backgroundColor = "#3d7ae3";
-      progress.style.borderColor = "#3d7ae3";
+      progressBarDynamic.style.backgroundColor = "#3d7ae3";
+      progressDynamic.style.borderColor = "#3d7ae3";
     } else if (value >= 80 && value <= 90) {
-      progressBar.style.backgroundColor = "blue";
-      progress.style.borderColor = "blue";
+      progressBarDynamic.style.backgroundColor = "blue";
+      progressDynamic.style.borderColor = "blue";
     } else {
-      progressBar.style.backgroundColor = "green";
-      progress.style.borderColor = "green";
+      progressBarDynamic.style.backgroundColor = "green";
+      progressDynamic.style.borderColor = "green";
     }
-  }
+}
 
 //progress-bar-v2
 
-function updateProgressBar(value) {
+function updateProgressBar2(value) {
     const progressBar = document.getElementById('progress-bar');
     const progress = document.getElementById('progress-container');
     progressBar.style.width = value + '%';

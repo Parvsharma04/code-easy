@@ -1,11 +1,11 @@
-#progress-container {
+#progress-container-dynamic {
   width: 80%;
   margin: 50px auto;
   border: 1px solid #ccc;
   overflow: hidden;
   border-radius: 50px;
 }
-#progress-bar {
+#progress-bar-dynamic {
   height: 30px;
   width: 0;
   background: linear-gradient(
@@ -28,13 +28,13 @@
     background-position: 20px 0;
   }
 }
-.container{
+.container-dynamic{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.container2{
+.container-dynamic{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

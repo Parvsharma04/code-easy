@@ -62,24 +62,22 @@ const ProgressBarDocs = () => {
               <hr />
               <div className="down">
                 <pre ref={codeRef}>
-                  <code>{`<div>
-      <div class="container">
-        <div id="progress-container">
-          <div id="progress-bar"></div>
+                  <code>{`<div class="container-dynamic">
+        <div id="progress-container-dynamic">
+          <div id="progress-bar-dynamic"></div>
         </div>
       </div>
   
-      <div class="container2">
+      <div class="container-dynamic-input">
         <label for="percentageInput">Enter Percentage: </label>
         <input
           type="number"
           id="percentageInput"
           min="0"
           max="100"
-          oninput="updateProgressBar(this.value)"
+          oninput="updateProgressBarDynamic(this.value)"
         />
-      </div>
-    </div>`}</code>
+      </div>`}</code>
                 </pre>
               </div>
             </div>

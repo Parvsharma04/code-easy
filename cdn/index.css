@@ -1,4 +1,4 @@
-// navbar.css
+/* // navbar.css */
 .navbar
 {
     width: 100%;
@@ -115,7 +115,7 @@ ul li{
     }
 }
 
-// acordian css
+/* // acordian css */
 .wrapper
 {
     display: flex;
@@ -156,7 +156,7 @@ ul li{
     transition: all 0.5s cubic-bezier(1,0,1,0);
 }
 
-// basic-form
+/* // basic-form */
 .form-container{
     display: flex;
     flex-direction: column;
@@ -233,7 +233,7 @@ input[type="submit"]{
     }
 }
 
-// login-form
+/* // login-form */
 .login-container {
     padding: 20px;
     border: 2px solid black;
@@ -307,7 +307,7 @@ input[type="submit"]{
     }
 }
 
-//signup-form
+/* //signup-form */
 .signup-container {
     padding: 20px;
     border: 2px solid black;
@@ -377,7 +377,7 @@ input[type="submit"]{
     }
 }
 
-// searchable-accordian
+/* // searchable-accordian */
 .search-container {
     display: flex;
     margin-bottom: 10px;
@@ -459,7 +459,7 @@ input[type="submit"]{
   }
 
 
-// sortable-accordian
+/* // sortable-accordian */
 
 .item {
     background: #f0ebe1;
@@ -520,7 +520,7 @@ input[type="submit"]{
   background-color: #45a049;
 }
 
-// static-progress
+/* // static-progress */
 #progress-container {
     width: 80%;
     margin: 50px auto;
@@ -552,7 +552,7 @@ input[type="submit"]{
     width: auto;
 }
 
-// percentage-progressbar
+/* // percentage-progressbar */
 #progress-container {
     width: 80%;
     margin: 50px auto;
@@ -588,7 +588,7 @@ input[type="submit"]{
   width: auto;
 }
 
-// dynamic-progres
+/* // dynamic-progres */
 #progress-container {
     width: 80%;
     margin: 50px auto;
@@ -636,7 +636,7 @@ input[type="submit"]{
     width: auto;
   }
 
-// spinner-1
+/* // spinner-1 */
 .spinner1-container {
     display: flex;
     justify-content: center;
@@ -661,7 +661,7 @@ input[type="submit"]{
     }
   }
 
-// spinner-3
+/* // spinner-3 */
 .spinner-container {
   display: flex;
   align-items: center;

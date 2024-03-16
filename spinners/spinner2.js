@@ -1,4 +1,4 @@
-const spinner = document.getElementById('spinner2');
+const spinner = document.getElementById('multicolorspinner');
 let rotationCount = 0;
 
 spinner.addEventListener('animationiteration', () => {

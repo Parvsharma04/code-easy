@@ -1,0 +1,59 @@
+
+#popover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 7px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#popovertext {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#popovertext::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  border-color: #000 #0000 #0000 #0000;
+}
+
+#popover:hover #popovertext {
+  top: -130%;
+  visibility: visible;
+  opacity: 1;
+}
+#popoverhover {
+  background-color: lightblue;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px; 
+  font-size: 20px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#popoverhover:hover {
+  background-color: #8cd2ff; 
+  color: white; 
+}
+
+

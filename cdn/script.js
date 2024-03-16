@@ -1,6 +1,7 @@
 // basic form
 // List of countries
 const countries = [
+  
     "Afghanistan",
     "Albania",
     "Algeria",
@@ -387,7 +388,7 @@ function updateProgressBar(value) {
 
 // spinner 2
 
-const spinner = document.getElementById('spinner2');
+const spinner = document.getElementById('multicolorspinner');
 let rotationCount = 0;
 
 spinner.addEventListener('animationiteration', () => {
@@ -410,7 +411,7 @@ function changeColor() {
 //spinner 3
 
 document.addEventListener('DOMContentLoaded', function () {
-  const shapeDropdown = document.getElementById('shapeDropdown');
+  const shapeDropdown = document.getElementById('shapespinnerDropdown');
   const rotation = document.getElementById('rotation')
 
   shapeDropdown.addEventListener('change', function () {

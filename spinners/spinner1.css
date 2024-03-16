@@ -1,10 +1,10 @@
-.spinner1-container {
+.basicspinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.spinner1 {
+.basicspinner {
   width: 40px;
   height: 40px;
   border: 4px solid #333;

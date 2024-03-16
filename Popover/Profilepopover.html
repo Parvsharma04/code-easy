@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="Profilepopover.css">
+</head>
+<body>
+    <div class="container">
+        <button class="user-profile-button" data-popover-target="popover-user-profile">User profile</button>
+
+        <div id="popover-user-profile" class="popover" role="tooltip">
+            <div class="popover-content">
+                <div class="popover-header">
+                    <a href="#">
+                        <img class="profile-picture" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+                    </a>
+                    <div>
+                        <button class="follow-button">Follow</button>
+                    </div>
+                </div>
+                <p class="user-name"><a href="#">Jese Leos</a></p>
+                <p class="user-handle"><a href="#">@jeseleos</a></p>
+                <p class="user-bio">Open-source contributor. Building <a href="#" class="user-link">flowbite.com</a>.</p>
+                <ul class="user-stats">
+                    <li>
+                        <a href="#">
+                            <span class="stat-number">799</span>
+                            <span>Following</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="stat-number">3,758</span>
+                            <span>Followers</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popover-arrow"></div>
+        </div>
+    </div>
+
+    <script src="./Profilepopover.js"></script>
+</body>
+</html>

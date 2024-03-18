@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import Navbar from "./Navbar";
 import "../styles/NavbarDocs.css";
 import "../styles/Framework.css";
-import {Sidebar} from "./Sidebar";
+import { Sidebar } from "./Sidebar";
 import NavbarComponent from "../FrameworkComponent/NavbarComponent";
 
-const NavbarDocs = ({theme, settheme}) => {
+const NavbarDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);
 
   const handleCopyToClipboard = () => {
@@ -26,16 +26,23 @@ const NavbarDocs = ({theme, settheme}) => {
 
   return (
     <div className="framework">
-      <Navbar theme={theme} settheme={settheme}/>
+      <Navbar theme={theme} settheme={settheme} />
       <div className="subContainer">
-        <Sidebar className={"w-1/3"} theme={theme} settheme={settheme}/>
-        <div className={`w-auto container ${theme === "dark"
-                  ? "bg-black text-white"
-                  : "bg-white text-black"}`}>
+        <Sidebar className={"w-1/3"} theme={theme} settheme={settheme} />
+        <div
+          className={`w-auto relative top-20 container ${
+            theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
           <div className={`heading w-fit `}>
-            <h1 id="title" className={`${theme === "dark"
-                  ? "bg-black text-white"
-                  : "bg-white text-black"}`}>Navbar</h1>
+            <h1
+              id="title"
+              className={`${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
+              Navbar
+            </h1>
             <p>
               A navigation bar is a link to appropriate section/pages in a
               website that helps reader in traversing the online document
@@ -202,15 +209,17 @@ const NavbarDocs = ({theme, settheme}) => {
               <div className="nav-up w-fit">
                 <NavbarComponent />
               </div>
-                <hr />
-                <div className="type w-fit">
-                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
-                </div>
-                <hr />
-                <div className="down w-fit">                
-                  <pre ref={codeRef}>
-                    <code>                  
-{`<nav>
+              <hr />
+              <div className="type w-fit">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+              <hr />
+              <div className="down w-fit">
+                <pre ref={codeRef}>
+                  <code>
+                    {`<nav>
   <div class="primary-nav">
     <div class="primary-nav-logo">
       <h3>Codeeasy</h3>
@@ -293,8 +302,8 @@ const NavbarDocs = ({theme, settheme}) => {
   </ul>
 </div>
 </nav>`}
-                    </code>
-                  </pre>
+                  </code>
+                </pre>
               </div>
             </div>
           </div>

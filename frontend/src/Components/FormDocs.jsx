@@ -1,13 +1,13 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import "../styles/FormDocs.css";
 import Navbar from "./Navbar";
-import {Sidebar} from "./Sidebar";
+import { Sidebar } from "./Sidebar";
 import "../styles/Framework.css";
 import BasicFormComponent from "../FrameworkComponent/BasicFormComponent";
 import SignUpComponent from "../FrameworkComponent/SignUpComponent";
-import LoginComponent from "../FrameworkComponent/LoginComponent"
+import LoginComponent from "../FrameworkComponent/LoginComponent";
 
-const FormDocs = () => {
+const FormDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);
 
   const handleCopyToClipboard = () => {
@@ -28,17 +28,32 @@ const FormDocs = () => {
 
   return (
     <div className="framework">
-        <Navbar />
+      <Navbar theme={theme} settheme={settheme} />
       <div className="subContainer">
-        <Sidebar />
-        <div className="container">
-          <div className="heading">
-            <h1 id="title">Forms</h1>
+        <Sidebar className="w-1/3" theme={theme} settheme={settheme} />
+        <div
+          className={`w-2/3 relative top-20 container ${
+            theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
+          <div
+            className={`heading ${
+              theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+            }`}
+          >
+            <h1
+              id="title"
+              className={`${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
+              Forms
+            </h1>
             <h2>
               A form is an essential part of a website that allows users to
               input and submit data for various purposes.
             </h2>
-          </div>  
+          </div>
           <div className="description">
             <h2>How it works ?</h2>
             <ol>
@@ -79,15 +94,17 @@ const FormDocs = () => {
               <div className="up">
                 <BasicFormComponent />
               </div>
-                <hr />
-                <div className="type">
-                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
-                </div>
-                <hr />
-                <div className="down">                
-                  <pre ref={codeRef}>
-                    <code>                  
-{`<div className="form-container">
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>
+                    {`<div className="form-container">
   <h2 id="heading">Basic Form</h2>
   <form className="form-detail" action="#" method="get" id="myform">
     <input
@@ -161,23 +178,25 @@ const FormDocs = () => {
     <input className="btn" type="submit" name="submit" defaultValue="Submit" />
   </form>
 </div>`}
-                    </code>
-                  </pre>
+                  </code>
+                </pre>
               </div>
             </div>
             <div className="render">
               <div className="up">
                 <LoginComponent />
               </div>
-                <hr />
-                <div className="type">
-                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
-                </div>
-                <hr />
-                <div className="down">                
-                  <pre ref={codeRef}>
-                    <code>                  
-{`<div className="login-container">
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>
+                    {`<div className="login-container">
   <h2>Login</h2>
   <form action="#">
     <input type="text" id="username" name="username" placeholder="Username" />
@@ -194,23 +213,25 @@ const FormDocs = () => {
     Forgot Password?
   </a>
 </div>`}
-                    </code>
-                  </pre>
+                  </code>
+                </pre>
               </div>
             </div>
             <div className="render">
               <div className="up">
                 <SignUpComponent />
               </div>
-                <hr />
-                <div className="type">
-                  <button className="copy-btn" onClick={handleCopyToClipboard}>Copy to Clipboard</button>
-                </div>
-                <hr />
-                <div className="down">                
-                  <pre ref={codeRef}>
-                    <code>                  
-{`<div className="signup-container">
+              <hr />
+              <div className="type">
+                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                  Copy to Clipboard
+                </button>
+              </div>
+              <hr />
+              <div className="down">
+                <pre ref={codeRef}>
+                  <code>
+                    {`<div className="signup-container">
   <h2>Signup</h2>
   <form action="#">
     <input
@@ -243,8 +264,8 @@ const FormDocs = () => {
     </a>
   </p>
 </div>`}
-                    </code>
-                  </pre>
+                  </code>
+                </pre>
               </div>
             </div>
           </div>

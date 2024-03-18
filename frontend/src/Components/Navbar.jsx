@@ -6,7 +6,7 @@ import search_icon_light from "../assets/search-w.png";
 import search_icon_dark from "../assets/search-b.png";
 import toggle_light from "../assets/night.png";
 import togggle_dark from "../assets/day.png";
-
+import Login from "./Login";
 
 const Navbar = ({ theme, settheme }) => {
   const toggle_mode = () => {
@@ -18,24 +18,25 @@ const Navbar = ({ theme, settheme }) => {
     let right = document.querySelector(".right");
     let left_ul = document.querySelector(".left ul");
 
-    if(right.style.display === "none"){
+    if (right.style.display === "none") {
       right.style.display = "flex";
       right.style.justifyContent = "center";
       right.style.alignItems = "center";
       right.style.padding = "13px 0";
-      navbar.style.flexDirection = "column"
-    }
-    else{
-      right.style.display = "none"
-      navbar.style.flexDirection = "row"
+      navbar.style.flexDirection = "column";
+    } else {
+      right.style.display = "none";
+      navbar.style.flexDirection = "row";
     }
     left_ul.style.display = left_ul.style.display === "none" ? "flex" : "none";
-  }
+  };
 
   return (
-    <div className="navbar">
+    <div className="navbar fixed z-50">
       <div className="left">
-        <h2 id="nav-logo" className={theme == "light" ? logo_light : logo_dark}>Codeeasy</h2>
+        <h2 id="nav-logo" className={theme == "light" ? logo_light : logo_dark}>
+          Codeeasy
+        </h2>
         <ul id="nav-ul">
           <a href="/">
             <li>Home</li>
@@ -53,18 +54,13 @@ const Navbar = ({ theme, settheme }) => {
       </div>
       <div className="right">
         <div className="search-box">
-          <input type="text" placeholder="Quick Search" className="pt-2"/>
+          <input type="text" placeholder="Quick Search" className="pt-2" />
           <img
             src={theme == "light" ? search_icon_light : search_icon_dark}
             className="mr-2"
           />
         </div>
-        <button
-          onClick={() => (window.location.href = "/register")}
-          className={`bg-white text-black p-2 rounded-lg ml-3 ${theme} === "light ? btn-light : null`}
-        >
-          Login
-        </button>
+        <Login theme={theme} settheme={settheme} />
         <img
           onClick={() => {
             toggle_mode();
@@ -76,7 +72,7 @@ const Navbar = ({ theme, settheme }) => {
       </div>
 
       <div className="hamburger w-6">
-        <button id="menubtn" onClick={ () => mediumDeviceToggle()}>
+        <button id="menubtn" onClick={() => mediumDeviceToggle()}>
           <svg
             viewBox="0 0 24 24"
             fill="none"

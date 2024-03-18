@@ -23,7 +23,7 @@ export const Sidebar = ({ theme, setTheme }) => {
         style={{ width: size.width + "px", height: size.height + "px" }}
       >
         <div
-          className={`w-full ${
+          className={`w-auto top-20 h-full ${
             theme === "dark" ? "bg-gray-800" : "bg-gray-50"
           } border-r border-gray-200 sidebar `}
         >

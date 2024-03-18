@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import Navbar from "./Navbar";
-import {Sidebar} from "./Sidebar";
+import { Sidebar } from "./Sidebar";
 import DynamicProgressBar from "../FrameworkComponent/DynamicProgressBar";
 import StaticWPercentage from "../FrameworkComponent/StaticWPercentage";
 import StaticProgressBar from "../FrameworkComponent/StaticProgressBar";
 // import '../styles/ProgressBarDocs.css'
 
-const ProgressBarDocs = () => {
+const ProgressBarDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);
 
   const handleCopyToClipboard = () => {
@@ -27,13 +27,24 @@ const ProgressBarDocs = () => {
 
   return (
     <div className="framework">
-      <Navbar />
+      <Navbar theme={theme} settheme={settheme} />
       <div className="subContainer">
-        <Sidebar />
-        <div className="container">
+        <Sidebar className="w-1/3" theme={theme} settheme={settheme} />
+        <div
+          className={`w-2/3 relative top-20 container ${
+            theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+          }`}
+        >
           <div className="heading">
             {/* <p className="font-bold text-xl text-center pt-10">Progress Bar with Input</p> */}
-            <h1 id="title">Progress Bar With Input</h1>
+            <h1
+              id="title"
+              className={`${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
+              Progress Bar With Input
+            </h1>
           </div>
           <br />
           <div className="description pl-7 pr-7">
@@ -48,9 +59,9 @@ const ProgressBarDocs = () => {
 
           <div className="variant1 pl-7 pr-7">
             <br />
-          <h1 className="text-left font-bold">Dynamic: </h1>
+            <h1 className="text-left font-bold">Dynamic: </h1>
             <div className="render">
-              <div>{ < DynamicProgressBar/> }</div>
+              <div>{<DynamicProgressBar />}</div>
               <br />
               <hr />
               <div className="type">
@@ -84,9 +95,11 @@ const ProgressBarDocs = () => {
           </div>
           <div className="variant2 pl-7 pr-7">
             <br />
-          <h1 className="text-left font-bold">Static With Percentage Counter: </h1>
+            <h1 className="text-left font-bold">
+              Static With Percentage Counter:{" "}
+            </h1>
             <div className="render">
-              <div>{ < StaticWPercentage/> }</div>
+              <div>{<StaticWPercentage />}</div>
               <br />
               <hr />
               <div className="type">
@@ -119,10 +132,10 @@ const ProgressBarDocs = () => {
           </div>
           <div className="variant3 pl-7 pr-7 pb-7">
             <br />
-          <h1 className="text-left font-bold">Static: </h1>
+            <h1 className="text-left font-bold">Static: </h1>
             <div className="render">
-              <div>{ < StaticProgressBar/> }</div>
-              <br />  
+              <div>{<StaticProgressBar />}</div>
+              <br />
               <hr />
               <div className="type">
                 <button className="copy-btn" onClick={handleCopyToClipboard}>

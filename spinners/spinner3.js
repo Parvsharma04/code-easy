@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const shapeDropdown = document.getElementById('shapeDropdown');
+    const shapeDropdown = document.getElementById('shapespinnerDropdown');
     const rotation = document.getElementById('rotation')
   
     shapeDropdown.addEventListener('change', function () {

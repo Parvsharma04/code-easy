@@ -4,23 +4,37 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Navbar from "./Navbar"
-import aditya_img from "../assets/aditya_img.jpg"
-import arsh_img from "../assets/arsh_img.jpg"
-import parv_img from "../assets/parv_img.jpg"
-import aryan_img from "../assets/aryan_img.jpg"
+import Navbar from "./Navbar";
+import aditya_img from "../assets/aditya_img.jpg";
+import arsh_img from "../assets/arsh_img.jpg";
+import parv_img from "../assets/parv_img.jpg";
+import aryan_img from "../assets/aryan_img.jpg";
 
-const Team = () => {
+const Team = ({ theme, settheme }) => {
   return (
     <>
-      <Navbar />
-      <section>
+      <Navbar theme={theme} settheme={settheme} />
+      <section
+        className={`absolute w-full mt-20 h-full ${
+          theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         <div className="row">
-          <h1 className="font-extrabold text-5xl pt-1">Our Team</h1>
+          <h1
+            className={`font-extrabold text-5xl pt-1 ${
+              theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+            }`}
+          >
+            Our Team
+          </h1>
         </div>
         <div className="row">
-          <div className="column">
-            <div className="card">
+          <div className="column border rounded-lg">
+            <div
+              className={`card ${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
               <div className="img-container">
                 <img src={aryan_img} />
               </div>
@@ -42,15 +56,19 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="column">
-            <div className="card">
+          <div className="column border rounded-lg">
+            <div
+              className={`card ${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
               <div className="img-container">
                 <img src={aditya_img} />
               </div>
               <h3>Aditya Sharma</h3>
               <p>Front-End Designer</p>
               <div className="icons">
-              <a href="">
+                <a href="">
                   <LinkedInIcon />
                 </a>
                 <a href="">
@@ -65,15 +83,19 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="column">
-            <div className="card">
+          <div className="column border rounded-lg">
+            <div
+              className={`card ${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
               <div className="img-container">
                 <img src={parv_img} />
               </div>
               <h3>Parv Sharma</h3>
               <p>Back-End Designer</p>
               <div className="icons">
-              <a href="">
+                <a href="">
                   <LinkedInIcon />
                 </a>
                 <a href="">
@@ -88,15 +110,19 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="column">
-            <div className="card">
+          <div className="column border rounded-lg">
+            <div
+              className={`card ${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+              }`}
+            >
               <div className="img-container">
                 <img src={arsh_img} />
               </div>
               <h3>Arshdeep</h3>
               <p>Back-End Designer</p>
               <div className="icons">
-              <a href="">
+                <a href="">
                   <LinkedInIcon />
                 </a>
                 <a href="">

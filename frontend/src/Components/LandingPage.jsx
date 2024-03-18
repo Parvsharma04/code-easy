@@ -6,7 +6,7 @@ import img4 from "../assets/image-selectnone-2.svg";
 import img5 from "../assets/image-selectnone-3.svg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import "../styles/landing.css"
+import "../styles/landing.css";
 
 const LandingPage = ({ theme, settheme }) => {
   const customTheme = createTheme({
@@ -14,8 +14,8 @@ const LandingPage = ({ theme, settheme }) => {
       MuiTextField: {
         styleOverrides: {
           root: {
-            '&:hover': {
-              display: 'none'
+            "&:hover": {
+              // display: "none",
             },
           },
         },
@@ -28,17 +28,23 @@ const LandingPage = ({ theme, settheme }) => {
       <>
         <Navbar theme={theme} settheme={settheme} />
         <section
-          style={{ paddingTop: '4vh', height: '74vh' }}
-          className="bg-black flex flex-col items-center justify-center pt-0 px-5 pb-[88px] box-border gap-[56px] w-auto shrink-0 text-left text-27xl-7 text-gray-200 font-inter lg:pb-[57px] lg:box-border mq750:gap-[56px] mq750:pb-[37px] mq750:box-border"
+          className={`absolute mt-14 p-24 w-full ${
+            theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+          }`}
         >
-          <div style={{boxShadow: '0px 0px 100px red'}} className="content-container flex flex-col items-center justify-start gap-[12px] max-w-full shrink-0">
+          <div
+            style={{ boxShadow: "0px 0px 100px red" }}
+            className="content-container flex flex-col items-center justify-start gap-[12px] w-fit m-auto"
+          >
             <div className="flex flex-col items-center justify-start py-0 px-[18px] box-border gap-[15px] max-w-full">
               <TextField
                 className="text-white [border:none] bg-[transparent] w-[254px] h-[29.5px] font-inter text-smi-9 text-dimgray-100 mix-blend-normal"
                 placeholder="BaseHub Is Now Open for Everyone"
                 variant="outlined"
                 InputProps={{
-                  startAdornment: <img width="9px" height="12.1px" src={img1} />,
+                  startAdornment: (
+                    <img width="9px" height="12.1px" src={img1} />
+                  ),
                   inputProps: {
                     style: { color: "white" },
                   },
@@ -51,12 +57,18 @@ const LandingPage = ({ theme, settheme }) => {
                     borderRadius: "9999px",
                     fontSize: "12.9px",
                   },
-                  "& .MuiInputBase-input": { paddingLeft: "8px", color: "#646464" },
+                  "& .MuiInputBase-input": {
+                    paddingLeft: "8px",
+                    color: "#646464",
+                  },
                   width: "254px",
                 }}
               />
               <div className="flex flex-col items-center justify-start max-w-full">
-                <div style={{ fontSize: 'xx-large' }} className="relative leading-[52.8px] z-[1] mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]">
+                <div
+                  style={{ fontSize: "xx-large" }}
+                  className="relative leading-[52.8px] z-[1] mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]"
+                >
                   Fast, Collaborative, AI-Native
                 </div>
                 <div className="relative leading-[52.8px] text-whitesmoke inline-block max-w-full mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]">
@@ -105,18 +117,28 @@ const LandingPage = ({ theme, settheme }) => {
               </div>
             </div>
             <div className="flex flex-row items-start justify-start py-0 pr-0 pl-[5px]">
-              <button style={{ backgroundColor: '#e53935' }} className="rounded cursor-pointer [border:none] pt-2.5 pb-3 pr-[7px] pl-[13px] bg-orangered-100 rounded-77xl flex flex-row items-center justify-end mix-blend-normal whitespace-nowrap hover:bg-orangered-200">
-                <div onClick={ () => {
-                  window.location.href = "./framework"
-                }} className="relative text-base-1 leading-[16px] font-medium font-inter text-black text-left">
+              <button
+                style={{ backgroundColor: "#e53935" }}
+                className="rounded cursor-pointer [border:none] pt-2.5 pb-3 pr-[7px] pl-[13px] bg-orangered-100 rounded-77xl flex flex-row items-center justify-end mix-blend-normal whitespace-nowrap hover:bg-orangered-200"
+              >
+                <div
+                  onClick={() => {
+                    window.location.href = "./framework";
+                  }}
+                  className="relative text-base-1 leading-[16px] font-medium font-inter text-black text-left"
+                >
                   Get Started
                 </div>
               </button>
             </div>
           </div>
         </section>
-        <hr />
-        <Footer />
+        <hr
+          className={`absolute w-full bottom-24 z-50 ${
+            theme === "dark" ? "bg-white" : "bg-black"
+          }`}
+        />
+        <Footer theme={theme} settheme={settheme} />
       </>
     </ThemeProvider>
   );

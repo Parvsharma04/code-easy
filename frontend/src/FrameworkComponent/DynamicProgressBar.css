@@ -40,3 +40,8 @@
   flex-direction: row;
   justify-content: center;
 }
+
+#percentageInput-dynamic{
+  
+  width: auto;
+}

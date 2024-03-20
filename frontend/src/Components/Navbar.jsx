@@ -42,7 +42,7 @@ const Navbar = ({ theme, settheme }) => {
             <li>Home</li>
           </a>
           <a href="/packages">
-            <li>Packages</li>
+            <li id="packages">Packages</li>
           </a>
           <a href="/framework">
             <li>Framework</li>

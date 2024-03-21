@@ -238,7 +238,7 @@ const countries = [
     const option = document.createElement("option");
     option.value = country;
     option.text = country;
-    countrySelect.add(option);
+    countrySelect.append(option);
   });
   
 

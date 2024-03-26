@@ -11,6 +11,10 @@ import ProgressBarDocs from "./Components/ProgressBarDocs";
 import AccordianDocs from "./Components/AccordianDocs";
 import LandingPage from "./Components/LandingPage";
 import SpinnerDocs from "./Components/SpinnerDocs";
+import Popover from './Components/Popover';
+import Popover2 from './Components/Popover2';
+import Popover3 from './Components/Popover3';
+import PopoverDocs from "./Components/PopoverDocs";
 
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
@@ -63,8 +67,15 @@ const App = () => {
           path="/framework/spinners"
           element={<SpinnerDocs theme={theme} settheme={settheme} />}
         />
+        <Route
+          path="/framework/popover"
+          element={<PopoverDocs theme={theme} settheme={settheme} />}
+        />
       </Routes>
       {/* <Footer /> */}
+      {/* <Popover /> */}
+      {/* <Popover2 /> */}
+      {/* <Popover3 /> */}
     </div>
   );
 };

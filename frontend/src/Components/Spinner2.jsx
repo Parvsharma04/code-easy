@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Spinner2 = () => {
   const [rotationCount, setRotationCount] = useState(0);
-  const colors = ['#3498db', '#e74c3c', '#27ae60', '#f39c12']; // Add more colors as needed
+  const colors = ['#3498db', '#e74c3c', '#27ae60', '#f39c12']; 
 
   useEffect(() => {
     const spinner = document.getElementById('spinner');

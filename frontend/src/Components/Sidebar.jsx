@@ -30,7 +30,7 @@ export const Sidebar = ({ theme, setTheme }) => {
           <div className="mb-10 mt-10 flex justify-center items-center">
             <input
               type="text"
-              className={`rounded ${
+              className={`rounded h-11 pl-3 ${
                 theme === "dark" ? "bg-gray-700 text-white" : ""
               }`}
               placeholder="Quick Search"
@@ -90,6 +90,14 @@ export const Sidebar = ({ theme, setTheme }) => {
               }`}
             >
               Spinners
+            </a>
+            <a
+              href="/framework/popover"
+              className={`flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group ${
+                theme === "dark" ? "text-white" : ""
+              }`}
+            >
+              Popover
             </a>
           </div>
         </div>

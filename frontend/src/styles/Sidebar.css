@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .sidebar{
     height: 100vh;
@@ -6,6 +7,15 @@
     width: auto;
     padding: 0 30px;
     width: 30%;
+=======
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0 30px;
+  width: 30%;
+>>>>>>> 6cbb9d46d5a41f98df675c3a30ecf95e03d0bbf6
 }
 .sidebar {
   /* height: 82vh; */

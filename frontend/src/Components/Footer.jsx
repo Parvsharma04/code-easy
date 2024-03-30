@@ -4,11 +4,11 @@ const Footer = ({ theme, settheme }) => {
   return (
     <>
       <footer
-        className={`absolute bottom-0 w-full text-black-600 body-font ${
+        className={`absolute bottom-0 w-full text-black-600 body-font h-20 ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
         }`}
       >
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <div className="h-20 container mx-auto flex items-center justify-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
             <span className="ml-3 text-xl text-white">Codeeasy</span>
           </a>

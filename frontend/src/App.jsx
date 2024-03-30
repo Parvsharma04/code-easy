@@ -4,16 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./Components/Login";
 import Framework from "./Components/Framework";
 import Packages from "./Components/Packages";
-import Footer from "./Components/Footer";
 import NavbarDocs from "./Components/NavbarDocs";
 import FormDocs from "./Components/FormDocs";
 import ProgressBarDocs from "./Components/ProgressBarDocs";
 import AccordianDocs from "./Components/AccordianDocs";
 import LandingPage from "./Components/LandingPage";
 import SpinnerDocs from "./Components/SpinnerDocs";
-import Popover from './Components/Popover';
-import Popover2 from './Components/Popover2';
-import Popover3 from './Components/Popover3';
 import PopoverDocs from "./Components/PopoverDocs";
 
 const App = () => {
@@ -72,10 +68,6 @@ const App = () => {
           element={<PopoverDocs theme={theme} settheme={settheme} />}
         />
       </Routes>
-      {/* <Footer /> */}
-      {/* <Popover /> */}
-      {/* <Popover2 /> */}
-      {/* <Popover3 /> */}
     </div>
   );
 };

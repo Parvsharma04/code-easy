@@ -3,9 +3,9 @@ import "../styles/SpinnerDocs.css";
 import Navbar from "./Navbar";
 import "../styles/Framework.css";
 import { Sidebar } from "./Sidebar";
-import Spinners from "./Spinner1";
-import Spinners2 from "./Spinner2";
-import Shapespinners from "./Spinner3";
+import Spinners from "../FrameworkComponent/Spinner1";
+import Spinners2 from "../FrameworkComponent/Spinner2";
+import Shapespinners from "../FrameworkComponent/Spinner3";
 
 const SpinnerDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);

@@ -13,13 +13,13 @@ const LandingPage = ({ theme, settheme }) => {
     <>
       <Navbar theme={theme} settheme={settheme} />
       <section
-        className={`absolute mt-4 p-32 w-full h-fit ${
+        className={`fixed flex items-center justify-center p-8 m-auto w-full h-full ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
         }`}
       >
         <div
           style={{ boxShadow: "0px 0px 100px red" }}
-          className="content-container flex flex-col items-center justify-start gap-[12px] w-fit m-auto p-8"
+          className="content-container flex flex-col items-center justify-center gap-[12px] m-auto p-5"
         >
           <div className="flex flex-col items-center justify-start py-0 px-[18px] box-border gap-[15px] max-w-full">
             <div className="flex flex-col items-center justify-start max-w-full">
@@ -46,7 +46,7 @@ const LandingPage = ({ theme, settheme }) => {
           <div className="flex flex-row items-start justify-start pt-0 pb-3 pr-0 pl-1.5 box-border max-w-full text-smi-9">
             <div className="flex flex-col items-center justify-start gap-[4px] max-w-full">
               <div className="relative leading-[19.5px]">Used by</div>
-              <div className="flex flex-row items-start justify-center [row-gap:20px] mq750:flex-wrap">
+              <div className="flex items-start justify-center flex-wrap">
                 <img
                   className="self-stretch w-[120px] relative max-h-full overflow-hidden shrink-0 mix-blend-normal min-h-[45px]"
                   loading="eager"
@@ -91,11 +91,11 @@ const LandingPage = ({ theme, settheme }) => {
           </div>
         </div>
       </section>
-      <hr
+      {/* <hr
         className={`absolute w-full bottom-24 z-50 ${
           theme === "dark" ? "bg-white" : "bg-black"
         }`}
-      />
+      /> */}
       <Footer theme={theme} settheme={settheme} />
     </>
   );

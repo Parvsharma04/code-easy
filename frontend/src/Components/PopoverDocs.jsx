@@ -3,9 +3,9 @@ import "../styles/SpinnerDocs.css";
 import Navbar from "./Navbar";
 import "../styles/Framework.css";
 import { Sidebar } from "./Sidebar";
-import Popover from "./Popover";
-import Popover2 from "./Popover2";
-import Popover3 from "./Popover3";
+import Popover from "../FrameworkComponent/Popover";
+import Popover2 from "../FrameworkComponent/Popover2";
+import Popover3 from "../FrameworkComponent/Popover3";
 
 const PopoverDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);

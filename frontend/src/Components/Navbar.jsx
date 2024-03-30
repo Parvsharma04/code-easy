@@ -32,7 +32,7 @@ const Navbar = ({ theme, settheme }) => {
   };
 
   return (
-    <div className="navbar fixed z-50">
+    <div className="absolute top-0 navbar z-50 h-20">
       <div className="left">
         <h2 id="nav-logo" className={theme == "light" ? logo_light : logo_dark}>
           Codeeasy
@@ -54,7 +54,11 @@ const Navbar = ({ theme, settheme }) => {
       </div>
       <div className="right">
         <div className="search-box">
-          <input type="text" placeholder="Quick Search" className="pt-2" />
+          <input
+            type="text"
+            placeholder="Quick Search"
+            className="p-1 ml-2 quickSearch"
+          />
           <img
             src={theme == "light" ? search_icon_light : search_icon_dark}
             className="mr-2"

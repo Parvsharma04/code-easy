@@ -5,6 +5,9 @@
   flex-direction: column;
   padding: 0 35px;
 }
+.navDiv {
+  height: 80vh !important;
+}
 .heading {
   display: flex;
   flex-wrap: wrap;
@@ -135,11 +138,11 @@ hr {
     white-space: normal;
   }
 } */
-@media screen and (max-width: 1000px){
-    nav{
-        flex-direction: column;
-        height: auto !important;
-    }
+@media screen and (max-width: 1000px) {
+  nav {
+    flex-direction: column;
+    height: auto !important;
+  }
 }
 @media screen and (max-width: 912px) {
   .subContainer {

@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import "../styles/NavbarDocs.css";
 import "../styles/Framework.css";
 import { Sidebar } from "./Sidebar";
+import Footer from "./Footer";
 import NavbarComponent from "../FrameworkComponent/NavbarComponent";
 
 const NavbarDocs = ({ theme, settheme }) => {
@@ -27,14 +28,19 @@ const NavbarDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="subContainer">
-        <Sidebar className={"w-1/3"} theme={theme} settheme={settheme} />
+      <div className="w-full flex flex-row mt-20 fixed">
+        <Sidebar theme={theme} settheme={settheme} />
+        <hr
+          className={`h-full w-1 ${
+            theme === "light" ? "text-black" : "text-white"
+          }`}
+        />
         <div
-          className={`w-auto relative top-20 container ${
+          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
-          <div className={`heading w-fit `}>
+          <div className={`heading`}>
             <h1
               id="title"
               className={`${
@@ -309,6 +315,7 @@ const NavbarDocs = ({ theme, settheme }) => {
           </div>
         </div>
       </div>
+      <Footer theme={theme} settheme={settheme} />
     </div>
   );
 };

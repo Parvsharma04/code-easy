@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-// import  from "./Sidebar";
+import React from "react";
 import Navbar from "./Navbar";
 import "../styles/Framework.css";
 import { Sidebar } from "./Sidebar";
 import { useRef } from "react";
+import Footer from "./Footer";
 import LanguageIcon from "@mui/icons-material/Language";
-import { dark } from "@mui/material/styles/createPalette";
 
 const Framework = ({ theme, settheme }) => {
   const codeRefCss = useRef(null);
@@ -28,24 +27,24 @@ const Framework = ({ theme, settheme }) => {
   };
 
   return (
-    <div className="framework">
+    <div className="block framework w-full h-full">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="subContainer">
+      <div className="w-full flex flex-row mt-20 fixed">
         <Sidebar theme={theme} settheme={settheme} />
+        <hr
+          className={`h-full w-1 ${
+            theme === "light" ? "text-black" : "text-white"
+          }`}
+        />
         <div
-          className={`p-5 quickStart mt-20 absolute ${
+          className={`w-2/3 flex flex-col flex-wrap ${
             theme === "dark"
               ? "bg-gray-800 text-white"
               : "bg-gray-50 text-black"
           }`}
-          style={{
-            width: "80vw",
-            left: "20vw",
-            height: "-webkit-fill-available",
-          }}
         >
           <h1
-            className={`text-2xl ${
+            className={`lg:text-2xl text-xl mt-5 ${
               theme === "dark"
                 ? "bg-gray-800 text-white"
                 : "bg-gray-50 text-black"
@@ -54,11 +53,11 @@ const Framework = ({ theme, settheme }) => {
             <LanguageIcon className="mr-2" />
             Include cdn link to your project
           </h1>
-          <div className="csscdn flex items-start justify-center flex-col p-5 pl-3 mt-5 gap-5">
-            <div className="pr-7 w-full border shadow-md p-2">
+          <div className="csscdn flex items-start justify-center flex-col w-full flex-wrap p-5 pl-3 mt-5 gap-5">
+            <div className="pr-7 border shadow-md p-2 w-full">
               <br />
               <h1
-                className={`text-start text-3xl ml-2 flex justify-center ${
+                className={`text-start lg:text-3xl text-xl flex justify-center ${
                   theme === "dark"
                     ? "bg-gray-800 text-white"
                     : "bg-gray-50 text-black"
@@ -68,7 +67,7 @@ const Framework = ({ theme, settheme }) => {
               </h1>
               <div className="type flex justify-end">
                 <button
-                  className="copy-btn p-2"
+                  className="bg-red-700 rounded p-1.5"
                   onClick={() => handleCopyToClipboard(codeRefCss)}
                 >
                   Copy to Clipboard
@@ -76,16 +75,20 @@ const Framework = ({ theme, settheme }) => {
               </div>
 
               <hr />
-              <div className="down flex justify-center">
-                <pre ref={codeRefCss}>
-                  <code>{`https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/index.css`}</code>
-                </pre>
-              </div>
+              <code
+                ref={codeRefCss}
+                className="down flex justify-center text-md flex-wrap break-words"
+                style={{
+                  wordBreak: "break-all",
+                }}
+              >
+                https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/index.css
+              </code>
             </div>
-            <div className="pr-7 w-full border shadow-md p-2">
+            <div className="pr-7 border shadow-md p-2 w-full">
               <br />
               <h1
-                className={`text-start text-3xl ml-2 flex justify-center ${
+                className={`text-start lg:text-3xl text-xl ml-2 flex justify-center ${
                   theme === "dark"
                     ? "bg-gray-800 text-white"
                     : "bg-gray-50 text-black"
@@ -95,7 +98,7 @@ const Framework = ({ theme, settheme }) => {
               </h1>
               <div className="type flex justify-end">
                 <button
-                  className="copy-btn p-2"
+                  className="bg-red-700 rounded p-1.5"
                   onClick={() => handleCopyToClipboard(codeRefJs)}
                 >
                   Copy to Clipboard
@@ -103,15 +106,20 @@ const Framework = ({ theme, settheme }) => {
               </div>
 
               <hr />
-              <div className="down flex justify-center">
-                <pre ref={codeRefJs}>
-                  <code>{`https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/script.js`}</code>
-                </pre>
-              </div>
+              <code
+                ref={codeRefJs}
+                className="down flex justify-center text-md flex-wrap break-words"
+                style={{
+                  wordBreak: "break-all",
+                }}
+              >
+                https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/script.js
+              </code>
             </div>
           </div>
         </div>
       </div>
+      <Footer theme={theme} settheme={settheme} />
     </div>
   );
 };

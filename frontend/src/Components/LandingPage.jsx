@@ -19,7 +19,7 @@ const LandingPage = ({ theme, settheme }) => {
       >
         <div
           style={{ boxShadow: "0px 0px 100px red" }}
-          className="content-container flex flex-col items-center justify-center gap-[12px] m-auto p-5"
+          className="text-center content-container flex flex-col items-center justify-center lg:gap-[12px] m-auto p-5"
         >
           <div className="flex flex-col items-center justify-start py-0 px-[18px] box-border gap-[15px] max-w-full">
             <div className="flex flex-col items-center justify-start max-w-full">
@@ -28,9 +28,6 @@ const LandingPage = ({ theme, settheme }) => {
                 className="relative leading-[52.8px] z-[1] mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]"
               >
                 Fast, Collaborative, AI-Native
-              </div>
-              <div className="relative leading-[52.8px] text-whitesmoke inline-block max-w-full mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]">
-                Content Management
               </div>
             </div>
           </div>

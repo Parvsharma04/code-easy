@@ -13,30 +13,36 @@ const Navbar = ({ theme, settheme }) => {
     theme == "light" ? settheme("dark") : settheme("light");
   };
 
-  const mediumDeviceToggle = () => {
-    let navbar = document.querySelector(".navbar");
-    let right = document.querySelector(".right");
-    let left_ul = document.querySelector(".left ul");
+  const mediumDeviceToggle = (e) => {
+    const navbar = document.querySelector(".navbar");
+    const navul = document.getElementById("nav-ul");
+    const right = document.querySelector(".right");
 
-    if (right.style.display === "none") {
+    if (navbar.classList.contains("h-20")) {
+      navbar.classList.remove("h-20");
+      navbar.classList.add("h-36");
+      navbar.classList.add("flex-col");
+      navul.style.display = "flex";
       right.style.display = "flex";
-      right.style.justifyContent = "center";
-      right.style.alignItems = "center";
-      right.style.padding = "13px 0";
-      navbar.style.flexDirection = "column";
     } else {
+      navbar.classList.remove("h-36");
+      navbar.classList.remove("flex-col");
+      navbar.classList.add("h-20");
+      navul.style.display = "none";
       right.style.display = "none";
-      navbar.style.flexDirection = "row";
     }
-    left_ul.style.display = left_ul.style.display === "none" ? "flex" : "none";
   };
 
   return (
-    <div className="absolute top-0 navbar z-50 h-20">
+    <div className="absolute top-0 navbar z-50 h-20 flex">
       <div className="left">
-        <h2 id="nav-logo" className={theme == "light" ? logo_light : logo_dark}>
+        <a
+          href="/"
+          id="nav-logo"
+          className={theme == "light" ? logo_light : logo_dark}
+        >
           Codeeasy
-        </h2>
+        </a>
         <ul id="nav-ul">
           <a href="/">
             <li>Home</li>

@@ -1,26 +1,11 @@
-.sidebar{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    padding: 0 30px;
-    width: 30%;
-}
 .sidebar {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   width: auto;
   padding: 0 30px;
   width: 30%;
-}
-.sidebar {
-  /* height: 82vh; */
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  /* width: auto; */
-  padding: 0 30px;
+  overflow-y: scroll;
+  height: 80vh !important;
 }
 
 .btn {
@@ -35,12 +20,41 @@
   background-color: #e63535;
   border-radius: 10px;
 }
-input {
-  width: -webkit-fill-available;
+.quickSearch {
   font-size: medium;
   padding: 10px;
   border: 1px solid #ccc;
 }
-input:hover {
+.quickSearch:hover {
   background-color: #e9ecef;
+}
+
+@media screen and (max-width: 1025px) {
+  .responsiveSearch {
+    font-size: medium;
+    height: 2rem !important;
+  }
+  .responsiveBtn {
+    font-size: medium;
+    padding: 4px !important;
+  }
+  .sidebar {
+    padding: 0 10px;
+  }
+  .quickSearch {
+    padding: 5px !important;
+    width: 15vw !important;
+    height: 3vh !important;
+  }
+  .quickSearch:hover {
+    background-color: rgba(255, 255, 255, 0.219);
+  }
+  .btn {
+    font-size: small !important;
+    padding: 3px !important;
+  }
+  .quickContainer {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
 }

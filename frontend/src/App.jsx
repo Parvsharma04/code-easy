@@ -17,6 +17,11 @@ const App = () => {
   const [theme, settheme] = useState(current_theme ? current_theme : "light");
 
   useEffect(() => {
+    if (theme == "light") {
+      document.body.style.background = "white";
+    } else {
+      document.body.style.background = "#212121";
+    }
     localStorage.setItem("current_theme", theme);
   }, [theme]);
 

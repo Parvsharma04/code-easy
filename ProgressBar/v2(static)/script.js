@@ -1,6 +1,6 @@
-function updateProgressBar(value) {
-    const progressBar = document.getElementById('progress-bar');
-    const progress = document.getElementById('progress-container');
+function updateProgressBarStatic(value) {
+    const progressBar = document.getElementById('progress-bar-static');
+    const progress = document.getElementById('progress-container-static');
     progressBar.style.width = value + '%';
     if (value < 30) {
       progressBar.style.backgroundColor = "red";

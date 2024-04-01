@@ -1,4 +1,4 @@
-#progress-container {
+#progress-container-static {
   width: 80%;
   margin: 50px auto;
   border: 1px solid #ccc;
@@ -6,19 +6,19 @@
   overflow: hidden;
 }
 
-#progress-bar {
+#progress-bar-static {
   height: 30px;
   width: 0;
   transition: width 0.5s ease;
 }
 
-.container{
+.container-staticbar{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
 }
-.container2{
+.container2-static-bar{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

@@ -112,8 +112,8 @@ ul li{
         width: -webkit-fill-available;
         align-items: center;
         /* flex-direction: row; */
-    }
-}
+    /* }
+} */
 
 /* // acordian css */
 .wrapper
@@ -187,7 +187,7 @@ form{
     background-color: #e9ecef;
 }
 
-/* input{
+input{
     width: -webkit-fill-available;
     font-size: medium;
     padding: 10px;
@@ -202,7 +202,7 @@ input[type="checkbox"]{
 }
 input[type="submit"]{
     width: auto;
-} */
+}
 .agreement{
     display: flex;
     justify-content: center;

@@ -152,19 +152,19 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={codeRef}>
-                  <code>{`<div class="container">
-      <div id="progress-container">
-        <div id="progress-bar"></div>
+                  <code>{`<div class="container-staticbar">
+      <div id="progress-container-static">
+        <div id="progress-bar-static"></div>
       </div>
     </div>
-    <div class="container2">
-        <label for="percentageInput">Enter Percentage: </label>
+    <div class="container2-static-bar">
+        <label for="percentageInputStatic">Enter Percentage: </label>
         <input
           type="number"
-          id="percentageInput"
+          id="percentageInputStatic"
           min="0"
           max="100"
-          oninput="updateProgressBar(this.value)"
+          oninput="updateProgressBarStatic(this.value)"
         />
       </div>`}</code>
                 </pre>

@@ -9,9 +9,11 @@ import Shapespinners from "../FrameworkComponent/Spinner3";
 import Footer from './Footer'
 
 const SpinnerDocs = ({ theme, settheme }) => {
-  const codeRef = useRef(null);
+  const basic = useRef();
+  const multicolor = useRef();
+  const shapespinner = useRef();
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = (codeRef) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -184,17 +186,17 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(basic)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={basic}>
                   <code>
-                    {`<div class="spinner-container">
-  <div class="spinner"></div>
-</div>`}
+                    {`<div class="basicspinner-container">
+      <div class="basicspinner"></div>
+    </div>`}
                   </code>
                 </pre>
               </div>
@@ -205,19 +207,19 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(multicolor)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={multicolor}>
                   <code>
                     {`<div>
-    <div class="spinner2-container">
-    <div id="spinner2"></div>
-    </div>
-</div>`}
+      <div class="multicolorspinner-container">
+        <div id="multicolorspinner"></div>
+      </div>
+    </div>`}
                   </code>
                 </pre>
               </div>
@@ -228,28 +230,28 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(shapespinner)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={shapespinner}>
                   <code>
-                    {`<div class="spinner-container" id="spinnerContainer">
-    <div id="rotation">
-    <div class="spinner circle"></div>
-    <div class="spinner circle"></div>
-    <div class="spinner circle"></div>
-    </div>
-    
-    <select class="shape-dropdown" id="shapeDropdown">
-    <option value="circle">Circle</option>
-    <option value="square">Square</option>
-    <option value="triangle">Triangle</option>
-    <option value="rectangle">Rectangle</option>
-    </select>
-</div>`}
+                    {`<div class="shapespinner-container" id="shapespinnerContainer">
+      <div id="rotation">
+        <div class="spinner circle"></div>
+        <div class="spinner circle"></div>
+        <div class="spinner circle"></div>
+      </div>
+
+      <select class="shapespinner-dropdown" id="shapespinnerDropdown" title="a">
+        <option value="circle">Circle</option>
+        <option value="square">Square</option>
+        <option value="triangle">Triangle</option>
+        <option value="rectangle">Rectangle</option>
+      </select>
+    </div>`}
                   </code>
                 </pre>
               </div>

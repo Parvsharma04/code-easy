@@ -9,9 +9,11 @@ import Popover3 from "../FrameworkComponent/Popover3";
 import Footer from './Footer'
 
 const PopoverDocs = ({ theme, settheme }) => {
-  const codeRef = useRef(null);
+  const basic = useRef();
+  const direction = useRef();
+  const profile = useRef();
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = (codeRef) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -193,13 +195,13 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(basic)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={basic}>
                   <code>
                     {`<div id="popover">
 <span id="popovertext">Sample Popover Text</span>
@@ -216,17 +218,26 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(direction)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={direction}>
                   <code>
-                    {`<div id="popover">
-<span id="popovertext">Sample Popover Text</span>
-<button id="popoverhover">Hover Me</button>`}
+                    {`<div class="alldirection-popover">
+<div>
+  <span tooltip="I'm up above it!">Up</span>
+</div>
+<div>
+  <span tooltip="Slide to the left" flow="left">Left</span>
+  <span tooltip="Slide to the right" flow="right">Right</span>
+</div>
+<div>
+  <span tooltip="Get Down." flow="down">Down</span>
+</div>
+</div>`}
                   </code>
                 </pre>
               </div>
@@ -239,17 +250,48 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(profile)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={profile}>
                   <code>
-                    {`<div id="popover">
-<span id="popovertext">Sample Popover Text</span>
-<button id="popoverhover">Hover Me</button>`}
+                    {`<div class="popover-container">
+<button class="user-profile-button" data-popover-target="popover-user-profile">User profile</button>
+
+<div id="popover-user-profile" class="popover" role="tooltip">
+    <div class="popover-content">
+        <div class="popover-header">
+            <a href="#">
+                <img class="profile-picture" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+            </a>
+            <div>
+                <button class="follow-button">Follow</button>
+            </div>
+        </div>
+        <p class="user-name"><a href="#">Jese Leos</a></p>
+        <p class="user-handle"><a href="#">@jeseleos</a></p>
+        <p class="user-bio">Open-source contributor. Building <a href="#" class="user-link">flowbite.com</a>.</p>
+        <ul class="user-stats">
+            <li>
+                <a href="#">
+                    <span class="stat-number">799</span>
+                    <span>Following</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="stat-number">3,758</span>
+                    <span>Followers</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="popover-arrow"></div>
+</div>
+</div>`}
                   </code>
                 </pre>
               </div>

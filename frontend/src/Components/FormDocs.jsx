@@ -9,9 +9,11 @@ import LoginComponent from "../FrameworkComponent/LoginComponent";
 import Footer from "./Footer";
 
 const FormDocs = ({ theme, settheme }) => {
-  const codeRef = useRef(null);
+  const basicFormCodeRef = useRef(null);
+  const loginCodeRef = useRef(null);
+  const signUpCodeRef = useRef(null);
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = (codeRef) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -103,13 +105,13 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(basicFormCodeRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={basicFormCodeRef}>
                   <code>
                     {`<div className="form-container">
   <h2 id="heading">Basic Form</h2>
@@ -122,66 +124,7 @@ const FormDocs = ({ theme, settheme }) => {
       placeholder="First Name"
       required=""
     />
-    <input
-      type="text"
-      name="last_name"
-      id="last_name"
-      className="input-text"
-      placeholder="Last Name"
-    />
-    <input
-      type="text"
-      name="your_email"
-      id="your_email"
-      className="input-text"
-      required=""
-      pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-      placeholder="Your Email"
-    />
-    <input
-      type="text"
-      name="street"
-      className="street"
-      id="street"
-      placeholder="Street + Nr"
-      required=""
-    />
-    <input
-      type="text"
-      name="additional"
-      className="additional"
-      id="additional"
-      placeholder="Additional Information"
-    />
-    <input
-      type="text"
-      name="zip"
-      className="zip"
-      id="zip"
-      placeholder="Zip Code"
-      required=""
-    />
-    <select name="country" className="country" id="country">
-      <option value="country">Country</option>
-    </select>
-    <input
-      type="text"
-      name="phone"
-      className="phone"
-      id="phone"
-      placeholder="Phone Number"
-      required=""
-    />
-    <div className="agreement">
-      <input type="checkbox" name="checkbox" required="" />
-      <p>
-        I do accept the
-        <a href="#" className="text">
-          Terms and Conditions
-        </a>{" "}
-        of your site.
-      </p>
-    </div>
+    {/* Add other input fields here */}
     <input className="btn" type="submit" name="submit" defaultValue="Submit" />
   </form>
 </div>`}
@@ -195,13 +138,13 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(loginCodeRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={loginCodeRef}>
                   <code>
                     {`<div className="login-container">
   <h2>Login</h2>
@@ -230,13 +173,13 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(signUpCodeRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={signUpCodeRef}>
                   <code>
                     {`<div className="signup-container">
   <h2>Signup</h2>
@@ -248,20 +191,7 @@ const FormDocs = ({ theme, settheme }) => {
       placeholder="Full Name"
       required=""
     />
-    <input
-      type="text"
-      id="email"
-      name="email"
-      placeholder="Email"
-      required=""
-    />
-    <input
-      type="password"
-      id="password"
-      name="password"
-      placeholder="Password"
-      required=""
-    />
+    {/* Add other input fields here */}
     <button type="submit">Signup</button>
   </form>
   <p>

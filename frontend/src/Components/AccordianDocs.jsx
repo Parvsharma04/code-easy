@@ -9,9 +9,11 @@ import SearchAccordianComponent from "../FrameworkComponent/SearchAccordianCompo
 import SortaccordianComponent from "../FrameworkComponent/SortAccordianComponent";
 import Footer from "./Footer";
 const AccordianDocs = ({ theme, settheme }) => {
-  const codeRef = useRef(null);
+  const basicRef = useRef(null);
+  const searchRef = useRef();
+  const sortRef = useRef();
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = (codeRef) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -207,13 +209,13 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(basicRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={basicRef}>
                   <code>
                     {`<div class="wrapper">
     <div class="accordion-container">
@@ -243,13 +245,13 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(searchRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={searchRef}>
                   <code>
                     {`<div class='wrapper'>
   <div class='search-container'>
@@ -291,13 +293,13 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(sortRef)}>
                   Copy to Clipboard
                 </button>
               </div>
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={sortRef}>
                   <code>
                     {`<div class='wrapper'>
   <div class='accordion-container'>

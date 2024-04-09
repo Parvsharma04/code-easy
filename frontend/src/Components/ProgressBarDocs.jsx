@@ -8,9 +8,11 @@ import StaticProgressBar from "../FrameworkComponent/StaticProgressBar";
 import Footer from './Footer'
 
 const ProgressBarDocs = ({ theme, settheme }) => {
-  const codeRef = useRef(null);
+  const staticRef = useRef();
+  const dynamicRef = useRef();
+  const percentageRef = useRef();
 
-  const handleCopyToClipboard = () => {
+  const handleCopyToClipboard = (codeRef) => {
     const codeElement = codeRef.current;
     const range = document.createRange();
     range.selectNode(codeElement);
@@ -71,14 +73,14 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard( dynamicRef)}>
                   Copy to Clipboard
                 </button>
               </div>
 
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={ dynamicRef}>
                   <code>{`<div class="container-dynamic">
         <div id="progress-container-dynamic">
           <div id="progress-bar-dynamic"></div>
@@ -109,14 +111,14 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={()=>handleCopyToClipboard(percentageRef)}>
                   Copy to Clipboard
                 </button>
               </div>
 
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={percentageRef}>
                   <code>{`<div class="container">
       <div id="progress-container">
         <div id="progress-bar"></div>
@@ -144,14 +146,14 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={handleCopyToClipboard}>
+                <button className="copy-btn" onClick={() => handleCopyToClipboard(staticRef)}>
                   Copy to Clipboard
                 </button>
               </div>
 
               <hr />
               <div className="down">
-                <pre ref={codeRef}>
+                <pre ref={staticRef}>
                   <code>{`<div class="container-staticbar">
       <div id="progress-container-static">
         <div id="progress-bar-static"></div>

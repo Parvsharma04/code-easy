@@ -225,89 +225,88 @@ const NavbarDocs = ({ theme, settheme }) => {
               <div className="down w-fit">
                 <pre ref={codeRef}>
                   <code>
-                    {`<nav>
-  <div class="primary-nav">
-    <div class="primary-nav-logo">
-      <h3>Codeeasy</h3>
-    </div>
-    <div class="primary-nav-link">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
+                    {`<nav id="nav-container">
+<div class="primary-nav">
+  <div class="primary-nav-logo">
+    <h3>Codeeasy</h3>
   </div>
-  <div class="secondary-nav">
-    <input type="text" class="secondary-nav-searchbar" />
-    <button class="secondary-nav-searchbtn nav-btnFont">Search</button>
-    <li class="nav-item">
-      <input
-        type="checkbox"
-        id="dark_toggler"
-        class="dark_toggler"
-        aria-label="Toggle Light Mode"
-        onclick="toggle_light_mode()"
-        checked
-      />
-    </li>
+  <div class="primary-nav-link">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </div>
-  <div class="hamburger">
-    <button id="btn"><i class="fas fa-bars"></i></button>
-  </div>
-</nav>
-<div id="hamburger-menu">
-  <ul>
-    <li>
-      <a
-        style="background: rgb(111, 92, 182)"
-        class="hamburger-content"
-        href="#"
-        >Home</a
-      >
-    </li>
-    <li>
-      <a
-        style="background: rgb(111, 92, 182)"
-        class="hamburger-content"
-        href="#"
-        >About</a
-      >
-    </li>
-    <li>
-      <a
-        style="background: rgb(111, 92, 182)"
-        class="hamburger-content"
-        href="#"
-        >Contact</a
-      >
-    </li>
-    <li>
-      <div
-        style="background: rgb(111, 92, 182)"
-        class="hamburger-content serach-container"
-      >
-        <input type="text" class="serach-container-input" />
-        <button class="serach-container-btn nav-btnFont">Search</button>
-      </div>
-    </li>
-    <li
-      style="background: rgb(111, 92, 182); padding: 10px 5px"
-      class="nav-item hamburger-content"
-      id="togglebtn"
-    >
-      <input
-        type="checkbox"
-        id="dark_toggler themeChanger2"
-        class="dark_toggler"
-        aria-label="Toggle Light Mode"
-        onclick="toggle_light_mode()"
-        checked
-      />
-    </li>
-  </ul>
 </div>
-</nav>`}
+<div class="secondary-nav">
+  <input type="text" class="secondary-nav-searchbar" />
+  <button class="secondary-nav-searchbtn nav-btnFont">Search</button>
+  <li class="nav-item">
+    <input
+      type="checkbox"
+      id="dark_toggler"
+      class="dark_toggler"
+      aria-label="Toggle Light Mode"
+      onclick="toggle_light_mode()"
+      checked
+    />
+  </li>
+</div>
+<div id="nav-hamburger">
+  <button id="nav-btn"><i class="fas fa-bars"></i></button>
+</div>
+</nav>
+<div id="nav-hamburger-menu">
+<ul>
+  <li>
+    <a
+      style="background: rgb(111, 92, 182)"
+      class="nav-hamburger-content"
+      href="#"
+      >Home</a
+    >
+  </li>
+  <li>
+    <a
+      style="background: rgb(111, 92, 182)"
+      class="nav-hamburger-content"
+      href="#"
+      >About</a
+    >
+  </li>
+  <li>
+    <a
+      style="background: rgb(111, 92, 182)"
+      class="nav-hamburger-content"
+      href="#"
+      >Contact</a
+    >
+  </li>
+  <li>
+    <div
+      style="background: rgb(111, 92, 182)"
+      class="nav-hamburger-content nav-serach-container"
+    >
+      <input type="text" class="nav-serach-container-input" />
+      <button class="nav-serach-container-btn nav-btnFont">Search</button>
+    </div>
+  </li>
+  <li
+    style="background: rgb(111, 92, 182)"
+    class="nav-item nav-hamburger-content"
+    id="nav-togglebtn"
+  >
+    <input
+      type="checkbox"
+      id="dark_toggler themeChanger2"
+      class="dark_toggler"
+      aria-label="Toggle Light Mode"
+      onclick="toggle_light_mode()"
+      checked
+    />
+  </li>
+</ul>
+</div>`}
                   </code>
                 </pre>
               </div>

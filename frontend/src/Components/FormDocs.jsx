@@ -6,6 +6,7 @@ import "../styles/Framework.css";
 import BasicFormComponent from "../FrameworkComponent/BasicFormComponent";
 import SignUpComponent from "../FrameworkComponent/SignUpComponent";
 import LoginComponent from "../FrameworkComponent/LoginComponent";
+import Footer from "./Footer";
 
 const FormDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);
@@ -29,10 +30,16 @@ const FormDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="subContainer">
-        <Sidebar className="w-1/3" theme={theme} settheme={settheme} />
+      <div className="w-full flex flex-row mt-20 fixed">
+        <Sidebar theme={theme} settheme={settheme} />
+        <hr
+          className={`h-full w-1 ${
+            theme === "light" ? "text-black" : "text-white"
+          }`}
+        />
+        
         <div
-          className={`w-2/3 relative top-20 container ${
+          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
@@ -271,6 +278,7 @@ const FormDocs = ({ theme, settheme }) => {
           </div>
         </div>
       </div>
+      <Footer theme={theme} settheme={settheme} />
     </div>
   );
 };

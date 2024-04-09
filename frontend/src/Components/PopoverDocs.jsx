@@ -6,6 +6,7 @@ import { Sidebar } from "./Sidebar";
 import Popover from "../FrameworkComponent/Popover";
 import Popover2 from "../FrameworkComponent/Popover2";
 import Popover3 from "../FrameworkComponent/Popover3";
+import Footer from './Footer'
 
 const PopoverDocs = ({ theme, settheme }) => {
   const codeRef = useRef(null);
@@ -28,10 +29,10 @@ const PopoverDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="subContainer">
-        <Sidebar className="w-1/3" theme={theme} settheme={settheme} />
+      <div className="w-full flex flex-row mt-20 fixed">
+        <Sidebar theme={theme} settheme={settheme} />
         <div
-          className={`w-2/3 relative top-20 container ${
+          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
@@ -256,6 +257,7 @@ const PopoverDocs = ({ theme, settheme }) => {
           </div>
         </div>
       </div>
+      <Footer theme={theme} settheme={settheme} />
     </div>
   );
 };

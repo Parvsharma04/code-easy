@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import "../styles/Navbar.css";
-import logo_light from "../assets/logo-black.png";
-import logo_dark from "../assets/logo-white.png";
 import search_icon_light from "../assets/search-w.png";
 import search_icon_dark from "../assets/search-b.png";
 import toggle_light from "../assets/night.png";
 import togggle_dark from "../assets/day.png";
+import siteLogo from '../assets/SiteLogo.png';
 import Login from "./Login";
 
 const Navbar = ({ theme, settheme }) => {
@@ -36,12 +35,8 @@ const Navbar = ({ theme, settheme }) => {
   return (
     <div className="absolute top-0 navbar z-50 h-20 flex">
       <div className="left">
-        <a
-          href="/"
-          id="nav-logo"
-          className={theme == "light" ? logo_light : logo_dark}
-        >
-          Codeeasy
+        <a href="/">
+          <img src={siteLogo} alt="Codeeasy" />
         </a>
         <ul id="nav-ul">
           <a href="/">

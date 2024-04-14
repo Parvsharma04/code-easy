@@ -82,7 +82,7 @@ const Framework = ({ theme, settheme }) => {
                   wordBreak: "break-all",
                 }}
               >
-                https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/index.css
+                https://bit.ly/43VQS5d
               </code>
             </div>
             <div className="pr-7 border shadow-md p-2 w-full">
@@ -113,7 +113,7 @@ const Framework = ({ theme, settheme }) => {
                   wordBreak: "break-all",
                 }}
               >
-                https://cdn.jsdelivr.net/gh/Arshdeep-13/codeeasy/cdn/script.js
+                https://bit.ly/3JnJ9TK
               </code>
             </div>
           </div>

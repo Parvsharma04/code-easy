@@ -27,17 +27,16 @@ const LandingPage = ({ theme, settheme }) => {
                 style={{ fontSize: "xx-large" }}
                 className="relative leading-[52.8px] z-[1] mq450:text-9xl mq450:leading-[32px] mq1050:text-18xl mq1050:leading-[42px]"
               >
-                Fast, Collaborative, AI-Native
+                Unlock Your Website's Potential: Explore Free Pre-Built Components Today!
               </div>
             </div>
           </div>
           <div className="flex flex-col items-center justify-start pt-0 px-0 pb-3 box-border max-w-full text-base-6">
             <div className="relative leading-[22.4px] z-[1]">
-              Make your website editable faster than ever with BaseHub, the
-              Headless CMS that’s built for
+              
             </div>
-            <div className="relative leading-[22.4px] inline-block max-w-full mt-[-1px]">
-              speed and collaborative workflows—all with the help of AI.
+            <div className="relative leading-[22.4px] inline max-w-90 mt-[-1px]">
+            Discover a treasure trove of free pre-built website components. From stylish templates, streamline your web development journey effortlessly.
             </div>
           </div>
           <div className="flex flex-row items-start justify-start pt-0 pb-3 pr-0 pl-1.5 box-border max-w-full text-smi-9">

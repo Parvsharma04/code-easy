@@ -16,12 +16,11 @@ const Login = ({ theme, settheme }) => {
   useEffect(() => {
     const btn = document.getElementById("btn");
     const packages = document.getElementById("packages");
-    packages.style.display = "none";
 
     const handleLogin = () => {
       signInWithPopup(auth, googleAuth)
         .then((res) => {
-          packages.style.display = "block";
+          sessionStorage.setItem("isAuthenticated", "true");
         })
         .catch((err) => {
           alert(err.message);
@@ -32,6 +31,7 @@ const Login = ({ theme, settheme }) => {
       signOut(auth)
         .then((res) => {
           packages.style.display = "none";
+          sessionStorage.clear();
         })
         .catch((err) => {
           alert(err.message);

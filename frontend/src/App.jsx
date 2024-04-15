@@ -25,6 +25,8 @@ const App = () => {
     localStorage.setItem("current_theme", theme);
   }, [theme]);
 
+  const isAuthenticated = sessionStorage.getItem("isAuthenticated");
+
   return (
     <div className={`${theme}`}>
       <Routes>
@@ -36,10 +38,12 @@ const App = () => {
           path="/team"
           element={<Team theme={theme} settheme={settheme} />}
         />
-        <Route
-          path="/packages"
-          element={<Packages theme={theme} settheme={settheme} />}
-        />
+        {isAuthenticated && (
+          <Route
+            path="/packages"
+            element={<Packages theme={theme} settheme={settheme} />}
+          />
+        )}
         <Route
           path="/register"
           element={<Login theme={theme} settheme={settheme} />}

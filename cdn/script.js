@@ -6,9 +6,10 @@ const hamburgerContent = document.getElementsByClassName(
   "nav-hamburger-content"
 );
 
-hamburger.addEventListener("click", () => {
-  toggleMenu();
-});
+hamburger &&
+  hamburger.addEventListener("click", () => {
+    toggleMenu();
+  });
 
 const toggleMenu = () => {
   hamburgerMenu.classList.toggle("makeVisible");

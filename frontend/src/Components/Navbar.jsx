@@ -4,13 +4,14 @@ import search_icon_light from "../assets/search-w.png";
 import search_icon_dark from "../assets/search-b.png";
 import toggle_light from "../assets/night.png";
 import togggle_dark from "../assets/day.png";
-import siteLogo from '../assets/SiteLogo.png';
+import siteLogo from "../assets/SiteLogo.png";
 import Login from "./Login";
 
 const Navbar = ({ theme, settheme }) => {
   const toggle_mode = () => {
     theme == "light" ? settheme("dark") : settheme("light");
   };
+  const isAuthenticated = sessionStorage.getItem("isAuthenticated");
 
   const mediumDeviceToggle = (e) => {
     const navbar = document.querySelector(".navbar");
@@ -42,9 +43,11 @@ const Navbar = ({ theme, settheme }) => {
           <a href="/">
             <li>Home</li>
           </a>
-          <a href="/packages">
-            <li id="packages">Packages</li>
-          </a>
+          {isAuthenticated && (
+            <a href="/packages">
+              <li id="packages">Packages</li>
+            </a>
+          )}
           <a href="/framework">
             <li>Framework</li>
           </a>

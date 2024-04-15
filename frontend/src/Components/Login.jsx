@@ -21,6 +21,7 @@ const Login = ({ theme, settheme }) => {
       signInWithPopup(auth, googleAuth)
         .then((res) => {
           sessionStorage.setItem("isAuthenticated", "true");
+          window.location.reload();
         })
         .catch((err) => {
           alert(err.message);

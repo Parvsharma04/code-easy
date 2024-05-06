@@ -39,7 +39,7 @@ const FormDocs = ({ theme, settheme }) => {
             theme === "light" ? "text-black" : "text-white"
           }`}
         />
-        
+
         <div
           className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
@@ -105,7 +105,10 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(basicFormCodeRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(basicFormCodeRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -113,20 +116,76 @@ const FormDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={basicFormCodeRef}>
                   <code>
-                    {`<div className="form-container">
-  <h2 id="heading">Basic Form</h2>
-  <form className="form-detail" action="#" method="get" id="myform">
-    <input
-      type="text"
-      name="first_name"
-      id="first_name"
-      className="input-text"
-      placeholder="First Name"
-      required=""
-    />
-    {/* Add other input fields here */}
-    <input className="btn" type="submit" name="submit" defaultValue="Submit" />
-  </form>
+                    {`<div class="form-container">
+<h2>Basic Form</h2>
+<form class="form-detail" action="#" method="get" id="myform">
+  <input
+    type="text"
+    name="first_name"
+    id="first_name"
+    class="input-text"
+    placeholder="First Name"
+    required
+  />
+  <input
+    type="text"
+    name="last_name"
+    id="last_name"
+    class="input-text"
+    placeholder="Last Name"
+  />
+  <input
+    type="text"
+    name="your_email"
+    id="your_email"
+    class="input-text"
+    required
+    pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+    placeholder="Your Email"
+  />
+  <input
+    type="text"
+    name="street"
+    class="street"
+    id="street"
+    placeholder="Street + Nr"
+    required
+  />
+  <input
+    type="text"
+    name="additional"
+    class="additional"
+    id="additional"
+    placeholder="Additional Information"
+  />
+  <input
+    type="text"
+    name="zip"
+    class="zip"
+    id="zip"
+    placeholder="Zip Code"
+    required
+  />
+  <select name="country" class="country" id="country">
+    <option value="country">Country</option>
+  </select>
+  <input
+    type="text"
+    name="phone"
+    class="phone"
+    id="phone"
+    placeholder="Phone Number"
+    required
+  />
+
+  <div class="agreement">
+  <input type="checkbox" name="checkbox" required/>
+  <p>I do accept the<a href="#" class="text">Terms and Conditions</a> of your site.</p>
+</div>
+
+<input class="btn" type="submit" name="submit" value="Submit" />
+
+</form>
 </div>`}
                   </code>
                 </pre>
@@ -138,7 +197,10 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(loginCodeRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(loginCodeRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -173,7 +235,10 @@ const FormDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(signUpCodeRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(signUpCodeRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -181,7 +246,7 @@ const FormDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={signUpCodeRef}>
                   <code>
-                    {`<div className="signup-container">
+                    {`<div class="signup-container">
   <h2>Signup</h2>
   <form action="#">
     <input
@@ -189,16 +254,30 @@ const FormDocs = ({ theme, settheme }) => {
       id="fullName"
       name="fullName"
       placeholder="Full Name"
-      required=""
+      required
     />
-    {/* Add other input fields here */}
+
+    <input
+      type="text"
+      id="email"
+      name="email"
+      placeholder="Email"
+      required
+    />
+
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Password"
+      required
+    />
+
     <button type="submit">Signup</button>
   </form>
+
   <p>
-    Already have an account?{" "}
-    <a href="#" className="login-link">
-      Login here
-    </a>
+    Already have an account? <a href="#" class="login-link">Login here</a>
   </p>
 </div>`}
                   </code>

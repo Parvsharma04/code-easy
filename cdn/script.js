@@ -67,15 +67,16 @@ window.addEventListener("resize", reloadPageIfGreaterThan615);
 const spinner = document.getElementById("multicolorspinner");
 let rotationCount = 0;
 
-spinner.addEventListener("animationiteration", () => {
-  // Detect when one full rotation is completed
-  rotationCount++;
+spinner &&
+  spinner.addEventListener("animationiteration", () => {
+    // Detect when one full rotation is completed
+    rotationCount++;
 
-  // Change color after every 2 rotations (adjust as needed)
-  if (rotationCount % 2 === 0) {
-    changeColor();
-  }
-});
+    // Change color after every 2 rotations (adjust as needed)
+    if (rotationCount % 2 === 0) {
+      changeColor();
+    }
+  });
 
 function changeColor() {
   const colors = ["red", "green", "yellow", "blue"];
@@ -87,11 +88,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const shapeDropdown = document.getElementById("shapespinnerDropdown");
   const rotation = document.getElementById("rotation");
 
-  shapeDropdown.addEventListener("change", function () {
-    const selectedShape = shapeDropdown.value;
-    rotation.innerHTML = renderSpinners(selectedShape);
-    renderSpinners(selectedShape);
-  });
+  shapeDropdown &&
+    shapeDropdown.addEventListener("change", function () {
+      const selectedShape = shapeDropdown.value;
+      rotation.innerHTML = renderSpinners(selectedShape);
+      renderSpinners(selectedShape);
+    });
 
   function renderSpinners(shape) {
     switch (shape) {
@@ -124,3 +126,245 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+// form
+// List of countries
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Austrian Empire*",
+  "Azerbaijan",
+  "Baden*",
+  "Bahamas, The",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Bavaria*",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin (Dahomey)",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Brunswick and Lüneburg*",
+  "Bulgaria",
+  "Burkina Faso (Upper Volta)",
+  "Burma",
+  "Burundi",
+  "Cabo Verde",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cayman Islands, The",
+  "Central African Republic",
+  "Central American Federation*",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo Free State, The*",
+  "Costa Rica",
+  "Cote d’Ivoire (Ivory Coast)",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czechia",
+  "Czechoslovakia*",
+  "Democratic Republic of the Congo",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Duchy of Parma, The*",
+  "East Germany (German Democratic Republic)*",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Federal Government of Germany (1848-49)*",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia, The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Grand Duchy of Tuscany, The*",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Hanover*",
+  "Hanseatic Republics*",
+  "Hawaii*",
+  "Hesse*",
+  "Holy See",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kingdom of Serbia/Yugoslavia*",
+  "Kiribati",
+  "Korea",
+  "Kosovo",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Lew Chew (Loochoo)*",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mecklenburg-Schwerin*",
+  "Mecklenburg-Strelitz*",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Namibia",
+  "Nassau*",
+  "Nauru",
+  "Nepal",
+  "Netherlands, The",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North German Confederation*",
+  "North German Union*",
+  "North Macedonia",
+  "Norway",
+  "Oldenburg*",
+  "Oman",
+  "Orange Free State*",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papal States*",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Piedmont-Sardinia*",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Republic of Genoa*",
+  "Republic of Korea (South Korea)",
+  "Republic of the Congo",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Schaumburg-Lippe*",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands, The",
+  "Somalia",
+  "South Africa",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Tajikistan",
+  "Tanzania",
+  "Texas*",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Two Sicilies*",
+  "Uganda",
+  "Ukraine",
+  "Union of Soviet Socialist Republics*",
+  "United Arab Emirates, The",
+  "United Kingdom, The",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Venezuela",
+  "Vietnam",
+  "Württemberg*",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
+
+// Get the select element
+const countrySelect = document.getElementById("country");
+
+// Populate the dropdown with countries
+countrySelect &&
+  countries.forEach((country) => {
+    const option = document.createElement("option");
+    option.value = country;
+    option.text = country;
+    countrySelect.add(option);
+  });

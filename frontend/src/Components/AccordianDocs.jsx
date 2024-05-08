@@ -218,22 +218,9 @@ const AccordianDocs = ({ theme, settheme }) => {
                 <pre ref={basicRef}>
                   <code>
                     {`<div class="wrapper">
-    <div class="accordion-container">
-    {data.map((item, i) => (
-        <div className="item" key={i}>
-        <div className="title" onClick={() => toggle(i)}>
-            <h2>{item.Name}</h2>
-            <span>{selected === i ? "-" : "+"}</span>
-        </div>
-        <div className={selected === i ? "content show" : "content"}>
-            {item.Description}
-        </div>
-        <div className={selected === i ? "content show" : "content"}>
-            {item.Install}
-        </div>
-        </div>
-    ))}
-    </div>
+  <div class="accordion-container" id="accordionContainer">
+    
+  </div>
 </div>`}
                   </code>
                 </pre>
@@ -253,34 +240,15 @@ const AccordianDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={searchRef}>
                   <code>
-                    {`<div class='wrapper'>
-  <div class='search-container'>
-    <input
-      class='search-input'
-      type="text"
-      placeholder="Search..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-    <button class='search-btn' onClick={handleSearch}>
-      Search
-    </button>
-    <button class='clear-btn' onClick={handleClearSearch}>
-      Clear
-    </button>
+                    {`<div class="wrapper">
+  <div class="search-container">
+    <input class="search-input" type="text" placeholder="Search..." id="searchInput">
+    <button class="search-btn" id="searchBtn" onclick="handleSearch()">Search</button>
+    <button class="clear-btn" id="clearBtn" onclick="handleClearSearch()">Clear</button>
   </div>
 
-  <div class='accordion-container'>
-    {filteredData.map((item, i) => (
-      <div class="item" key={i}>
-        <div class="title" onClick={() => toggle(i)}>
-          <h2>{item.Name}</h2>
-          <span>{selected === i ? '-' : '+'}</span>
-        </div>
-        <div class={selected === i ? 'content show' : 'content'}>{item.Description}</div>
-        <div class={selected === i ? 'content show' : 'content'}>{item.Install}</div>
-      </div>
-    ))}
+  <div class="accordion-container" id="accordionContainer">
+    
   </div>
 </div>`}
                   </code>
@@ -301,24 +269,11 @@ const AccordianDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={sortRef}>
                   <code>
-                    {`<div class='wrapper'>
-  <div class='accordion-container'>
-    {data.map((item, i) => (
-      <div class="item" key={i}>
-        <div class="title" onClick={() => toggle(i)}>
-          <h2>{item.Name}</h2>
-          <span>{selected === i ? '-' : '+'}</span>
-        </div>
-        <div class={selected === i ? 'content show' : 'content'}>
-          {item.values.map((value, index) => (
-            <div key={index}>{value}</div>
-          ))}
-        </div>
-        <button class='sort-btn' onClick={() => sortValues(i)}>Sort</button>
-      </div>
-    ))}
-  </div>
-</div>`}
+                    {`
+<div class="wrapper">
+  <div class="accordion-container" id="accordionContainer">
+    
+  </div>`}
                   </code>
                 </pre>
               </div>

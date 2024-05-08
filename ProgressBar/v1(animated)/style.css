@@ -28,13 +28,13 @@
     background-position: 20px 0;
   }
 }
-.container-dynamic{
+.container-dynamic {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.container-dynamic{
+.container-dynamic {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

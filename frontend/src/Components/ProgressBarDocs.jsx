@@ -5,7 +5,7 @@ import DynamicProgressBar from "../FrameworkComponent/DynamicProgressBar";
 import StaticWPercentage from "../FrameworkComponent/StaticWPercentage";
 import StaticProgressBar from "../FrameworkComponent/StaticProgressBar";
 // import '../styles/ProgressBarDocs.css'
-import Footer from './Footer'
+import Footer from "./Footer";
 
 const ProgressBarDocs = ({ theme, settheme }) => {
   const staticRef = useRef();
@@ -73,14 +73,17 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard( dynamicRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(dynamicRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
 
               <hr />
               <div className="down">
-                <pre ref={ dynamicRef}>
+                <pre ref={dynamicRef}>
                   <code>{`<div class="container-dynamic">
         <div id="progress-container-dynamic">
           <div id="progress-bar-dynamic"></div>
@@ -111,7 +114,10 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(percentageRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(percentageRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -119,21 +125,21 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={percentageRef}>
-                  <code>{`<div class="container">
-      <div id="progress-container">
-        <div id="progress-bar"></div>
-      </div>
-    </div>
-    <div class="container2">
-        <label for="percentageInput">Enter Percentage: </label>
-        <input
-          type="number"
-          id="percentageInput"
-          min="0"
-          max="100"
-          oninput="updateProgressBar(this.value)"
-        />
-      </div>`}</code>
+                  <code>{`<div class="container-staticbar">
+  <div id="progress-container-static">
+    <div id="progress-bar-static"></div>
+  </div>
+</div>
+<div class="container2-static-bar">
+  <label for="percentageInput">Enter Percentage: </label>
+  <input
+    type="number"
+    id="percentageInput"
+    min="0"
+    max="100"
+    oninput="updateProgressBarStatic(this.value)"
+  />
+</div>`}</code>
                 </pre>
               </div>
             </div>
@@ -146,7 +152,10 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <br />
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(staticRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(staticRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -155,20 +164,20 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={staticRef}>
                   <code>{`<div class="container-staticbar">
-      <div id="progress-container-static">
-        <div id="progress-bar-static"></div>
-      </div>
-    </div>
-    <div class="container2-static-bar">
-        <label for="percentageInputStatic">Enter Percentage: </label>
-        <input
-          type="number"
-          id="percentageInputStatic"
-          min="0"
-          max="100"
-          oninput="updateProgressBarStatic(this.value)"
-        />
-      </div>`}</code>
+  <div id="progress-container-static">
+    <div id="progress-bar-static"></div>
+  </div>
+</div>
+<div class="container2-static-bar">
+  <label for="percentageInputStatic">Enter Percentage: </label>
+  <input
+    type="number"
+    id="percentageInputStatic"
+    min="0"
+    max="100"
+    oninput="updateProgressBarStaticWithoutPercentage(this.value)"
+  />
+</div>`}</code>
                 </pre>
               </div>
             </div>

@@ -39,7 +39,7 @@ const AccordianDocs = ({ theme, settheme }) => {
             theme === "light" ? "text-black" : "text-white"
           }`}
         />
-         <div
+        <div
           className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
@@ -209,7 +209,10 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(basicRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(basicRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -217,10 +220,8 @@ const AccordianDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={basicRef}>
                   <code>
-                    {`<div class="wrapper">
-  <div class="accordion-container" id="accordionContainer">
-    
-  </div>
+                    {`<div class="accordion-wrapper" id="accordionWrapper">
+  <div class="accordion-container" id="accordionContainer"></div>
 </div>`}
                   </code>
                 </pre>
@@ -232,7 +233,10 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(searchRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(searchRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -240,16 +244,27 @@ const AccordianDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={searchRef}>
                   <code>
-                    {`<div class="wrapper">
-  <div class="search-container">
-    <input class="search-input" type="text" placeholder="Search..." id="searchInput">
-    <button class="search-btn" id="searchBtn" onclick="handleSearch()">Search</button>
-    <button class="clear-btn" id="clearBtn" onclick="handleClearSearch()">Clear</button>
+                    {`<div class="accordion-wrapper2" id="searchAccordionWrapper2">
+  <div class="search-container2">
+    <input
+      class="search-input2"
+      type="text"
+      placeholder="Search..."
+      id="searchInput2"
+    />
+    <button class="search-btn2" id="searchBtn2" onclick="handleSearch2()">
+      Search
+    </button>
+    <button
+      class="clear-btn2"
+      id="clearBtn2"
+      onclick="handleClearSearch2()"
+    >
+      Clear
+    </button>
   </div>
 
-  <div class="accordion-container" id="accordionContainer">
-    
-  </div>
+  <div class="accordion-container2" id="searchAccordionContainer2"></div>
 </div>`}
                   </code>
                 </pre>
@@ -261,7 +276,10 @@ const AccordianDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={() => handleCopyToClipboard(sortRef)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(sortRef)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -269,11 +287,9 @@ const AccordianDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={sortRef}>
                   <code>
-                    {`
-<div class="wrapper">
-  <div class="accordion-container" id="accordionContainer">
-    
-  </div>`}
+                    {`<div class="wrapper3">
+  <div class="accordion-container3" id="accordionContainer3"></div>
+</div>`}
                   </code>
                 </pre>
               </div>

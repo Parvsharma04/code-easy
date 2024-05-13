@@ -396,6 +396,7 @@ function updateProgressBarStatic(value) {
   const progressBar = document.getElementById("progress-bar-static");
   const progress = document.getElementById("progress-container-static");
   progressBar.style.width = value + "%";
+  progressBar.innerText = value + "%";
   if (value < 30) {
     progressBar.style.backgroundColor = "red";
     progress.style.borderColor = "red";
@@ -418,7 +419,6 @@ function updateProgressBarStaticWithoutPercentage(value) {
   const progressBar = document.getElementById("progress-bar-static");
   const progress = document.getElementById("progress-container-static");
   progressBar.style.width = value + "%";
-  // progressBar.innerText = value + "%";
 
   if (value < 30) {
     progressBar.style.backgroundColor = "red";
@@ -437,3 +437,285 @@ function updateProgressBarStaticWithoutPercentage(value) {
     progress.style.borderColor = "green";
   }
 }
+
+// Popover
+const popover = document.querySelector(".popover");
+const userProfileButton = document.querySelector(".user-profile-button");
+const container = document.querySelector(".popover-container");
+
+userProfileButton &&
+  userProfileButton.addEventListener("mouseover", () => {
+    popover.style.display = "block";
+  });
+container &&
+  container.addEventListener("mouseleave", () => {
+    popover.style.display = "none";
+  });
+
+// Accordian
+// Component 1
+const data = [
+  {
+    package: "1",
+    Name: "Unveiling Our Vision",
+    Description:
+      "Welcome to our digital hub! Here, we share our passion for [Your Industry/Field]. Explore our site to discover the innovation, creativity, and dedication that drive our projects and initiatives.",
+  },
+  {
+    package: "2",
+    Name: "Crafting Excellence in Every Service",
+    Description:
+      "Discover the array of services we offer, tailored to meet the diverse needs of our clients. Whether its [Service 1], [Service 2], or [Service 3], we are committed to delivering excellence at every step.",
+  },
+  {
+    package: "3",
+    Name: "Powering Progress: Our Technology Arsenal",
+    Description:
+      "Explore the cutting-edge technologies that fuel our operations. From [Technology 1] to [Technology 2], we leverage the latest tools to ensure efficiency, security, and unmatched performance.",
+  },
+  {
+    package: "4",
+    Name: "Insights and Innovation Hub",
+    Description:
+      "Dive into our blog for the latest industry trends, insider perspectives, and updates on our projects. Stay informed, inspired, and connected to the pulse of innovation in [Your Industry/Field].",
+  },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionWrapper = document.getElementById("accordionWrapper");
+  const accordionContainer = document.getElementById("accordionContainer");
+
+  data.forEach((item, i) => {
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("accordion-item");
+    itemDiv.classList.add(`accordion-item-${i}`); // Unique class for each item
+    itemDiv.id = `accordion-item-${i}`; // Unique ID for each item
+
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("accordion-title");
+    titleDiv.classList.add(`accordion-title-${i}`); // Unique class for each title
+    titleDiv.innerHTML = `
+    <h2>${item.Name}</h2>
+    <span>+</span>
+  `;
+    titleDiv.addEventListener("click", () => toggle(i));
+
+    const contentDiv = document.createElement("div");
+    contentDiv.classList.add("accordion-content");
+    contentDiv.classList.add(`accordion-content-${i}`); // Unique class for each content
+    contentDiv.id = `accordion-content-${i}`; // Unique ID for each content
+    contentDiv.textContent = item.Description;
+
+    itemDiv.appendChild(titleDiv);
+    itemDiv.appendChild(contentDiv);
+
+    accordionContainer.appendChild(itemDiv);
+  });
+
+  accordionWrapper.appendChild(accordionContainer);
+});
+
+let selected = null;
+
+function toggle(i) {
+  const contentDivs = document.querySelectorAll(`.accordion-content`);
+  contentDivs.forEach((content, index) => {
+    if (i === index) {
+      content.classList.toggle("show");
+    } else {
+      content.classList.remove("show");
+    }
+  });
+
+  const titleSpans = document.querySelectorAll(`.accordion-title span`);
+  titleSpans.forEach((span, index) => {
+    if (i === index) {
+      span.textContent = span.textContent === "+" ? "-" : "+";
+    } else {
+      span.textContent = "+";
+    }
+  });
+
+  selected = selected === i ? null : i;
+}
+
+// Component 2
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    {
+      package: "1",
+      Name: "Unveiling Our Vision",
+      Description:
+        "Welcome to our digital hub! Here, we share our passion for [Your Industry/Field]. Explore our site to discover the innovation, creativity, and dedication that drive our projects and initiatives.",
+    },
+    {
+      package: "2",
+      Name: "Crafting Excellence in Every Service",
+      Description:
+        "Discover the array of services we offer, tailored to meet the diverse needs of our clients. Whether its [Service 1], [Service 2], or [Service 3], we are committed to delivering excellence at every step.",
+    },
+    {
+      package: "3",
+      Name: "Powering Progress: Our Technology Arsenal",
+      Description:
+        "Explore the cutting-edge technologies that fuel our operations. From [Technology 1] to [Technology 2], we leverage the latest tools to ensure efficiency, security, and unmatched performance.",
+    },
+    {
+      package: "4",
+      Name: "Insights and Innovation Hub",
+      Description:
+        "Dive into our blog for the latest industry trends, insider perspectives, and updates on our projects. Stay informed, inspired, and connected to the pulse of innovation in [Your Industry/Field].",
+    },
+  ];
+
+  const accordionWrapper = document.getElementById("searchAccordionWrapper2");
+  const accordionContainer = document.getElementById(
+    "searchAccordionContainer2"
+  );
+  const searchInput = document.getElementById("searchInput2");
+
+  let selected = null;
+  let filteredData = data;
+
+  function renderAccordion() {
+    accordionContainer.innerHTML = "";
+    filteredData.forEach((item, i) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("item2");
+      itemDiv.classList.add(`item2-${i}`); // Unique class for each item
+      itemDiv.id = `accordion-item2-${i}`; // Unique ID for each item
+
+      const titleDiv = document.createElement("div");
+      titleDiv.classList.add("title2");
+      titleDiv.classList.add(`title2-${i}`); // Unique class for each title
+      titleDiv.innerHTML = `
+        <h2>${item.Name}</h2>
+        <span>${selected === i ? "-" : "+"}</span>
+      `;
+      titleDiv.addEventListener("click", () => toggle2(i));
+
+      const contentDiv = document.createElement("div");
+      contentDiv.classList.add("content2");
+      contentDiv.classList.add(`content2-${i}`); // Unique class for each content
+      contentDiv.id = `accordion-content2-${i}`; // Unique ID for each content
+      contentDiv.textContent = item.Description;
+
+      if (selected === i) {
+        contentDiv.classList.add("show");
+      }
+
+      itemDiv.appendChild(titleDiv);
+      itemDiv.appendChild(contentDiv);
+
+      accordionContainer.appendChild(itemDiv);
+    });
+  }
+
+  function toggle2(i) {
+    selected = selected === i ? null : i;
+    renderAccordion();
+  }
+
+  function handleSearch2() {
+    const searchTerm = searchInput.value.toLowerCase();
+    filteredData = data.filter((item) =>
+      item.Name.toLowerCase().includes(searchTerm)
+    );
+    renderAccordion();
+  }
+
+  function handleClearSearch2() {
+    searchInput.value = "";
+    filteredData = data;
+    selected = null;
+    renderAccordion();
+  }
+
+  // Event listeners for search buttons
+  document
+    .getElementById("searchBtn2")
+    .addEventListener("click", handleSearch2);
+  document
+    .getElementById("clearBtn2")
+    .addEventListener("click", handleClearSearch2);
+
+  renderAccordion();
+});
+
+// Component 3
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    {
+      package: "1",
+      Name: "Unveiling Our Vision",
+      values: ["Apple", "Orange", "Dragon Fruit", "Kiwi"],
+    },
+    {
+      package: "2",
+      Name: "Crafting Excellence in Every Service",
+      values: ["BMW", "Audi", "Maruti Suzuki", "Kia"],
+    },
+    {
+      package: "3",
+      Name: "Powering Progress: Our Technology Arsenal",
+      values: ["Potato", "Tomato", "Onion", "Capsicum"],
+    },
+    {
+      package: "4",
+      Name: "Insights and Innovation Hub",
+      values: ["guitar", "flute", "violin", "piano"],
+    },
+  ];
+
+  const accordionContainer = document.getElementById("accordionContainer3");
+
+  function renderAccordion() {
+    accordionContainer.innerHTML = "";
+    data.forEach((item, i) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("item3");
+
+      const titleDiv = document.createElement("div");
+      titleDiv.classList.add("title3");
+      titleDiv.innerHTML = `
+        <h2>${item.Name}</h2>
+        <span>+</span>
+      `;
+      titleDiv.addEventListener("click", () => toggleContent(i));
+
+      const contentDiv = document.createElement("div");
+      contentDiv.classList.add("content3");
+
+      item.values.forEach((value, index) => {
+        const valueDiv = document.createElement("div");
+        valueDiv.textContent = value;
+        contentDiv.appendChild(valueDiv);
+      });
+
+      const sortButton = document.createElement("button");
+      sortButton.textContent = "Sort";
+      sortButton.classList.add("sort-btn3");
+      sortButton.addEventListener("click", () => sortValues(i));
+
+      itemDiv.appendChild(titleDiv);
+      itemDiv.appendChild(contentDiv);
+      itemDiv.appendChild(sortButton);
+
+      accordionContainer.appendChild(itemDiv);
+    });
+  }
+
+  function toggleContent(i) {
+    const contentDiv =
+      accordionContainer.children[i].querySelector(".content3");
+    contentDiv.classList.toggle("show");
+  }
+
+  function sortValues(i) {
+    const sortedValues = [...data[i].values].sort();
+    data[i].values = sortedValues;
+    renderAccordion();
+  }
+
+  renderAccordion();
+});

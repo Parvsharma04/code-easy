@@ -208,7 +208,7 @@ const FormDocs = ({ theme, settheme }) => {
               <div className="down">
                 <pre ref={loginCodeRef}>
                   <code>
-                    {`<div className="login-container">
+                    {`<div class="login-container">
   <h2>Login</h2>
   <form action="#">
     <input type="text" id="username" name="username" placeholder="Username" />
@@ -221,7 +221,7 @@ const FormDocs = ({ theme, settheme }) => {
     />
     <button type="submit">Login</button>
   </form>
-  <a href="#" className="forgot-password">
+  <a href="#" class="forgot-password">
     Forgot Password?
   </a>
 </div>`}

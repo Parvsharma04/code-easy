@@ -6,7 +6,7 @@ import { Sidebar } from "./Sidebar";
 import Popover from "../FrameworkComponent/Popover";
 import Popover2 from "../FrameworkComponent/Popover2";
 import Popover3 from "../FrameworkComponent/Popover3";
-import Footer from './Footer'
+import Footer from "./Footer";
 
 const PopoverDocs = ({ theme, settheme }) => {
   const basic = useRef();
@@ -195,7 +195,10 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(basic)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(basic)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -204,8 +207,9 @@ const PopoverDocs = ({ theme, settheme }) => {
                 <pre ref={basic}>
                   <code>
                     {`<div id="popover">
-<span id="popovertext">Sample Popover Text</span>
-<button id="popoverhover">Hover Me</button>`}
+  <span id="popovertext">Sample Popover Text</span>
+  <button id="popoverhover">Hover Me</button>
+</div>`}
                   </code>
                 </pre>
               </div>
@@ -218,7 +222,10 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(direction)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(direction)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -250,7 +257,10 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(profile)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(profile)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -265,7 +275,7 @@ const PopoverDocs = ({ theme, settheme }) => {
     <div class="popover-content">
         <div class="popover-header">
             <a href="#">
-                <img class="profile-picture" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+                <img class="profile-picture" src="#" alt="Jese Leos">
             </a>
             <div>
                 <button class="follow-button">Follow</button>

@@ -50,7 +50,7 @@ const Team = ({ theme, settheme }) => {
                 <a href="mailto:@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you.">
                   <EmailIcon />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/aryankaushik773/">
                   <InstagramIcon />
                 </a>
               </div>

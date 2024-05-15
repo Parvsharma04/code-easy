@@ -11,6 +11,7 @@ import AccordianDocs from "./Components/AccordianDocs";
 import LandingPage from "./Components/LandingPage";
 import SpinnerDocs from "./Components/SpinnerDocs";
 import PopoverDocs from "./Components/PopoverDocs";
+import Contact from "./Components/Contact";
 
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
@@ -44,6 +45,10 @@ const App = () => {
             element={<Packages theme={theme} settheme={settheme} />}
           />
         )}
+        <Route
+          path="/contact"
+          element={<Contact theme={theme} settheme={settheme} />}
+        />
         <Route
           path="/register"
           element={<Login theme={theme} settheme={settheme} />}

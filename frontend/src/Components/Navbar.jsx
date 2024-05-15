@@ -54,6 +54,9 @@ const Navbar = ({ theme, settheme }) => {
           <a href="/team">
             <li>Team</li>
           </a>
+          <a href="/contact">
+            <li>Contact</li>
+          </a>
         </ul>
       </div>
       <div className="right">

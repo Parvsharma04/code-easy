@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 import search_icon_light from "../assets/search-w.png";
 import search_icon_dark from "../assets/search-b.png";
@@ -6,10 +6,24 @@ import toggle_light from "../assets/night.png";
 import togggle_dark from "../assets/day.png";
 import siteLogo from "../assets/SiteLogo.png";
 import Login from "./Login";
+import algoliasearch from "algoliasearch/lite";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
+import "../styles/searchStyle.css";
+
+function Hit({ hit }) {
+  return (
+    <a
+      className="p-2 flex justify-center items-center w-44 text-xl hover:bg-gray-200 hover:text-black"
+      href={`${hit.links}`}
+    >
+      <h3>{hit.name}</h3>
+    </a>
+  );
+}
 
 const Navbar = ({ theme, settheme }) => {
   const toggle_mode = () => {
-    theme == "light" ? settheme("dark") : settheme("light");
+    theme === "light" ? settheme("dark") : settheme("light");
   };
   const isAuthenticated = sessionStorage.getItem("isAuthenticated");
 
@@ -32,6 +46,15 @@ const Navbar = ({ theme, settheme }) => {
       right.style.display = "none";
     }
   };
+  const searchClient = algoliasearch(
+    "C9Q6MP24BK",
+    "d09aab2b529184bed61459be5e32da21",
+    {
+      preserveSharedStateOnUnmount: true,
+    }
+  );
+
+  const [query, setQuery] = useState(""); // State to hold the search query
 
   return (
     <div className="absolute top-0 navbar z-50 h-20 flex">
@@ -60,23 +83,31 @@ const Navbar = ({ theme, settheme }) => {
         </ul>
       </div>
       <div className="right">
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Quick Search"
-            className="p-1 ml-2 quickSearch"
-          />
-          <img
-            src={theme == "light" ? search_icon_light : search_icon_dark}
-            className="mr-2"
-          />
+        <div>
+          <InstantSearch searchClient={searchClient} indexName="codeEasy">
+            <SearchBox
+              className="ais-InstantSearch__root"
+              placeholder="Quick Search"
+              onChangeCapture={(e) => setQuery(e.target.value)}
+            />
+            {query && (
+              <Hits
+                hitComponent={Hit}
+                className={`flex border absolute top-16 ${
+                  theme === "dark"
+                    ? "bg-black text-white"
+                    : "bg-white text-black"
+                } rounded-md p-3`}
+              />
+            )}
+          </InstantSearch>
         </div>
         <Login theme={theme} settheme={settheme} />
         <img
           onClick={() => {
             toggle_mode();
           }}
-          src={theme == "light" ? toggle_light : togggle_dark}
+          src={theme === "light" ? toggle_light : togggle_dark}
           alt=""
           className="toggle-icon ml-2"
         />

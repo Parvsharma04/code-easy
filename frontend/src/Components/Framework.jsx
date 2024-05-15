@@ -44,7 +44,7 @@ const Framework = ({ theme, settheme }) => {
           }`}
         >
           <h1
-            className={`lg:text-2xl text-xl mt-5 ${
+            className={`lg:text-2xl mt-2 text-xl ${
               theme === "dark"
                 ? "bg-gray-800 text-white"
                 : "bg-gray-50 text-black"
@@ -53,7 +53,7 @@ const Framework = ({ theme, settheme }) => {
             <LanguageIcon className="mr-2" />
             Include cdn link to your project
           </h1>
-          <div className="csscdn flex items-start justify-center flex-col w-full flex-wrap p-5 pl-3 mt-5 gap-5">
+          <div className="csscdn flex items-start justify-center flex-col w-full flex-wrap p-5 pl-3 gap-5">
             <div className="pr-7 border shadow-md p-2 w-full">
               <br />
               <h1

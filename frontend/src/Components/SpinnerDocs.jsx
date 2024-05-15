@@ -31,7 +31,7 @@ const SpinnerDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${

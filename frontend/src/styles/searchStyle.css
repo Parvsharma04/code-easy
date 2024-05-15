@@ -10,6 +10,7 @@
   border-radius: 15px;
   font-size: large;
   color: black;
+  background-color: gainsboro;
 }
 .ais-SearchBox-submitIcon {
   width: 20px;

@@ -32,7 +32,7 @@ const FormDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row justify-center items-center">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
@@ -44,9 +44,12 @@ const FormDocs = ({ theme, settheme }) => {
           className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
           <div
-            className={`heading ${
+            className={`heading w-full ${
               theme === "dark" ? "bg-black text-white" : "bg-white text-black"
             }`}
           >
@@ -54,18 +57,20 @@ const FormDocs = ({ theme, settheme }) => {
               id="title"
               className={`${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
+              } flex justify-center items-center w-full`}
             >
               Forms
             </h1>
-            <h2>
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
               A form is an essential part of a website that allows users to
               input and submit data for various purposes.
             </h2>
           </div>
-          <div className="description">
-            <h2>How it works ?</h2>
-            <ol>
+          <div className="description mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              How it works ?
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <li>
                 To use a form, you need to include all the form elements within
                 a container with the class name '.form' for styling and
@@ -79,13 +84,17 @@ const FormDocs = ({ theme, settheme }) => {
                 Styling classes like '.input', '.button', and '.textarea' are
                 available for styling specific elements.
               </li>
-            </ol>
+            </ul>
           </div>
 
-          <div className="variant1">
-            <h2>Form Elements Overview</h2>
-            <p>Explore the various form elements and their styling options:</p>
-            <ul>
+          <div className="variant1 mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              Form Elements Overview
+            </h2>
+            <p className="ml-3 mt-2 mb-3">
+              Explore the various form elements and their styling options:
+            </p>
+            <ul className="flex flex-col text-justify ml-4">
               <h3>Input Field:</h3>
               <li>
                 .input: Represents the basic styling for input fields within the
@@ -115,7 +124,7 @@ const FormDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={basicFormCodeRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="form-container">
 <h2>Basic Form</h2>
 <form class="form-detail" action="#" method="get" id="myform">
@@ -207,7 +216,7 @@ const FormDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={loginCodeRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="login-container">
   <h2>Login</h2>
   <form action="#">
@@ -245,7 +254,7 @@ const FormDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={signUpCodeRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="signup-container">
   <h2>Signup</h2>
   <form action="#">

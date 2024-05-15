@@ -67,7 +67,7 @@ const Framework = ({ theme, settheme }) => {
               </h1>
               <div className="type flex justify-end">
                 <button
-                  className="bg-red-700 rounded p-1.5"
+                  className="bg-red-700 rounded p-1.5 text-white"
                   onClick={() => handleCopyToClipboard(codeRefCss)}
                 >
                   Copy to Clipboard
@@ -98,7 +98,7 @@ const Framework = ({ theme, settheme }) => {
               </h1>
               <div className="type flex justify-end">
                 <button
-                  className="bg-red-700 rounded p-1.5"
+                  className="bg-red-700 rounded p-1.5  text-white"
                   onClick={() => handleCopyToClipboard(codeRefJs)}
                 >
                   Copy to Clipboard

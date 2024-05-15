@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../styles/Navbar.css";
 import search_icon_light from "../assets/search-w.png";
 import search_icon_dark from "../assets/search-b.png";
@@ -26,22 +26,23 @@ const Navbar = ({ theme, settheme }) => {
     theme === "light" ? settheme("dark") : settheme("light");
   };
   const isAuthenticated = sessionStorage.getItem("isAuthenticated");
+  const navUl = useRef(null);
 
   const mediumDeviceToggle = (e) => {
     const navbar = document.querySelector(".navbar");
     const navul = document.getElementById("nav-ul");
     const right = document.querySelector(".right");
 
-    if (navbar.classList.contains("h-20")) {
-      navbar.classList.remove("h-20");
-      navbar.classList.add("h-36");
+    if (navbar.classList.contains("h-24")) {
+      navbar.classList.remove("h-24");
+      navbar.classList.add("h-48");
       navbar.classList.add("flex-col");
       navul.style.display = "flex";
       right.style.display = "flex";
     } else {
-      navbar.classList.remove("h-36");
+      navbar.classList.remove("h-48");
       navbar.classList.remove("flex-col");
-      navbar.classList.add("h-20");
+      navbar.classList.add("h-24");
       navul.style.display = "none";
       right.style.display = "none";
     }
@@ -57,12 +58,22 @@ const Navbar = ({ theme, settheme }) => {
   const [query, setQuery] = useState(""); // State to hold the search query
 
   return (
-    <div className="navbar z-50 h-20 flex">
+    <div
+      className="navbar h-24 flex relative"
+      style={{
+        zIndex: 1000,
+      }}
+      id="navbar"
+    >
       <div className="left">
         <a href="/">
           <img src={siteLogo} alt="Codeeasy" />
         </a>
-        <ul id="nav-ul" className="flex flex-wrap w-fit">
+        <ul
+          id="nav-ul"
+          ref={navUl}
+          className="flex flex-wrap w-fit sm:text-md md:text-lg"
+        >
           <a href="/">
             <li>Home</li>
           </a>

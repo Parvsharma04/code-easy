@@ -39,16 +39,23 @@ const SpinnerDocs = ({ theme, settheme }) => {
           }`}
         />
         <div
-          className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
+          className={`p-5 w-full navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
-          <div className="heading">
+          <div
+            className={`heading w-full ${
+              theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+            }`}
+          >
             <h1
               id="title"
               className={`${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
+              } flex justify-center items-center w-full`}
             >
               Spinner
             </h1>
@@ -58,8 +65,10 @@ const SpinnerDocs = ({ theme, settheme }) => {
             </p>
           </div>
           <div className="description">
-            <h2 className="mb-1">How it works ?</h2>
-            <ul>
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              How it works ?
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <li id="desc">
                 For using a Spinner component for your webpage you are required
                 to wrap all the elements in the div under the class name
@@ -80,8 +89,8 @@ const SpinnerDocs = ({ theme, settheme }) => {
             </ul>
           </div>
 
-          <div className="variant1">
-            <h2 className="mb-1">
+          <div className="variant1 mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
               Spinning into the Future: Explore Our Next-Gen Spinner Component!
             </h2>
             <p>
@@ -196,7 +205,7 @@ const SpinnerDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={basic}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="basicspinner-container">
       <div class="basicspinner"></div>
     </div>`}
@@ -220,7 +229,7 @@ const SpinnerDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={multicolor}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div>
       <div class="multicolorspinner-container">
         <div id="multicolorspinner"></div>
@@ -246,7 +255,7 @@ const SpinnerDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={shapespinner}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="shapespinner-container" id="shapespinnerContainer">
       <div id="rotation">
         <div class="spinner circle"></div>

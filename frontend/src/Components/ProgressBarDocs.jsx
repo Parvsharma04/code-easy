@@ -32,32 +32,35 @@ const ProgressBarDocs = ({ theme, settheme }) => {
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
       <div className="w-full flex flex-row">
-        <Sidebar className="w-1/3" theme={theme} settheme={settheme} />
+        <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
             theme === "light" ? "text-black" : "text-white"
           }`}
         />
         <div
-          className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
+          className={`p-5 w-full navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
-          <div className="heading">
+          <div className="heading w-full">
             {/* <p className="font-bold text-xl text-center pt-10">Progress Bar with Input</p> */}
             <h1
               id="title"
               className={`${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
+              } sm:text-sm lg:text-2xl text-center`}
             >
               Progress Bar With Input
             </h1>
           </div>
           <br />
           <div className="description pl-7 pr-7">
-            <h2 className="font-bold text-lg">Overview: </h2>
-            <p>
+            <h2 className="font-bold sm:text-md md:text-xl">Overview: </h2>
+            <p className="sm:text-sm md:text-lg">
               The Progress Bar with Input is a user interface component designed
               to visually represent the progress of a task while allowing users
               to provide input. It's a versatile element that combines progress
@@ -65,9 +68,15 @@ const ProgressBarDocs = ({ theme, settheme }) => {
             </p>
           </div>
 
-          <div className="variant1 pl-7 pr-7">
+          <div className="variant1 mx-auto">
             <br />
-            <h1 className="text-left font-bold">Dynamic: </h1>
+            <h1
+              className={`text-left font-bold ${
+                theme === "dark" ? "text-white" : "text-black"
+              } sm:text-md md:text-xl`}
+            >
+              Dynamic:{" "}
+            </h1>
             <div className="render">
               <div>{<DynamicProgressBar />}</div>
               <br />
@@ -84,7 +93,7 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={dynamicRef}>
-                  <code>{`<div class="container-dynamic">
+                  <code className=" text-sm md:text-xl">{`<div class="container-dynamic">
         <div id="progress-container-dynamic">
           <div id="progress-bar-dynamic"></div>
         </div>
@@ -104,9 +113,13 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               </div>
             </div>
           </div>
-          <div className="variant2 pl-7 pr-7">
+          <div className="variant2 mx-auto">
             <br />
-            <h1 className="text-left font-bold">
+            <h1
+              className={`text-left font-bold ${
+                theme === "dark" ? "text-white" : "text-black"
+              } sm:text-md md:text-xl`}
+            >
               Static With Percentage Counter:{" "}
             </h1>
             <div className="render">
@@ -125,7 +138,7 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={percentageRef}>
-                  <code>{`<div class="container-staticbar">
+                  <code className=" text-sm md:text-xl">{`<div class="container-staticbar">
   <div id="progress-container-static">
     <div id="progress-bar-static"></div>
   </div>
@@ -144,9 +157,15 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               </div>
             </div>
           </div>
-          <div className="variant3 pl-7 pr-7 pb-7">
+          <div className="variant3 mx-auto">
             <br />
-            <h1 className="text-left font-bold">Static: </h1>
+            <h1
+              className={`text-left font-bold ${
+                theme === "dark" ? "text-white" : "text-black"
+              } sm:text-md md:text-xl`}
+            >
+              Static:{" "}
+            </h1>
             <div className="render">
               <div>{<StaticProgressBar />}</div>
               <br />
@@ -163,7 +182,7 @@ const ProgressBarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={staticRef}>
-                  <code>{`<div class="container-staticbar">
+                  <code className=" text-sm md:text-xl">{`<div class="container-staticbar">
   <div id="progress-container-static">
     <div id="progress-bar-static"></div>
   </div>

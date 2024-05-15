@@ -62,7 +62,7 @@ const Navbar = ({ theme, settheme }) => {
         <a href="/">
           <img src={siteLogo} alt="Codeeasy" />
         </a>
-        <ul id="nav-ul">
+        <ul id="nav-ul" className="flex flex-wrap w-fit">
           <a href="/">
             <li>Home</li>
           </a>

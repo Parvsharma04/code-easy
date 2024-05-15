@@ -62,9 +62,11 @@ const AccordianDocs = ({ theme, settheme }) => {
               user interaction
             </p>
           </div>
-          <div className="description">
-            <h2 className="mb-1">How it works ?</h2>
-            <ul>
+          <div className="description mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              How it works ?
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <li id="desc">
                 User Interaction: The accordion works based on user
                 interactions, typically a click or tap on a section header.
@@ -91,8 +93,10 @@ const AccordianDocs = ({ theme, settheme }) => {
             </ul>
           </div>
 
-          <div className="variant1">
-            <h2 className="mb-1">CLASSES</h2>
+          <div className="variant1 mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              CLASSES
+            </h2>
             <p>
               <h3>
                 Unleashing the power of our accordion component. Following is
@@ -100,7 +104,7 @@ const AccordianDocs = ({ theme, settheme }) => {
               </h3>
             </p>
 
-            <ul>
+            <ul className="flex flex-col text-justify ml-4">
               <li>
                 <h3>Accordion Container:</h3>
 
@@ -222,7 +226,7 @@ const AccordianDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={basicRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="accordion-wrapper" id="accordionWrapper">
   <div class="accordion-container" id="accordionContainer"></div>
 </div>`}
@@ -246,7 +250,7 @@ const AccordianDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={searchRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="accordion-wrapper2" id="searchAccordionWrapper2">
   <div class="search-container2">
     <input
@@ -289,7 +293,7 @@ const AccordianDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={sortRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="wrapper3">
   <div class="accordion-container3" id="accordionContainer3"></div>
 </div>`}

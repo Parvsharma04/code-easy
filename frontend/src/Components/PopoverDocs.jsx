@@ -34,31 +34,37 @@ const PopoverDocs = ({ theme, settheme }) => {
       <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <div
-          className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
+          className={`p-5 w-full navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
           style={{
             scrollbarWidth: "none",
           }}
         >
-          <div className="heading">
+          <div
+            className={`heading w-full ${
+              theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+            }`}
+          >
             <h1
               id="title"
               className={`${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
+              } flex justify-center items-center w-full`}
             >
               Popover
             </h1>
-            <p>
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
               A popover component is a user interface element It is designed to
               display additional information or options in a floating window
               that appears above or near the content currently being viewed.
-            </p>
+            </h2>
           </div>
-          <div className="description">
-            <h2 className="mb-1">How it works ?</h2>
-            <ul>
+          <div className="description mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              How it works ?
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <li id="desc">
                 To implement a Popover component on your webpage, you'll need to
                 wrap the relevant elements within a div under the class name
@@ -90,62 +96,62 @@ const PopoverDocs = ({ theme, settheme }) => {
               </li>
             </ul>
           </div>
-          <h2 className="mb-1">
+          <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
             RadiantReveal: Transform with PopOver Brilliance
           </h2>
           <p>
             Unleashing the power of our Popover component. Following is the
             description of each and everything :-
           </p>
-          <ul>
+          <ul className="flex flex-col text-justify ml-4">
             <h3>New Functionalities:</h3>
-            <li>
+            <li id="desc">
               Experience a whole new level of interaction as our Popover
               Component now reveals user profiles effortlessly on hover.
             </li>
-            <li>
+            <li id="desc">
               Hover over any user-triggered popover to instantly glimpse their
               profile details without clicking, enhancing user convenience and
               engagement.
             </li>
-            <li>
+            <li id="desc">
               Seamlessly integrated, this feature adds a touch of interactivity
               and personalization, ensuring users stay connected and informed at
               all times.
             </li>
-            <li>
+            <li id="desc">
               Whether it's left, right, top, or bottom, our Popover now
               intelligently aligns text content to ensure optimal readability
               and aesthetic appeal.
             </li>
-            <li>
+            <li id="desc">
               Say goodbye to awkwardly positioned text and hello to a harmonious
               visual experience that adapts effortlessly to any interface
               layout.
             </li>
 
             <h3>Improved Features:</h3>
-            <li>
+            <li id="desc">
               Elevate user engagement with the innovative hover profile preview
               feature, allowing users to effortlessly access profile details
               without clicking.
             </li>
-            <li>
+            <li id="desc">
               Seamlessly integrated into the Popover Component, this
               functionality provides a smoother and more intuitive browsing
               experience, enhancing overall user satisfaction.
             </li>
-            <li>
+            <li id="desc">
               Revolutionize text alignment within the Popover Component with the
               introduction of multi-directional text alignment.
             </li>
-            <li>
+            <li id="desc">
               Experience improved readability and visual appeal as text content
               intelligently adjusts its alignment based on the popover's
               position, ensuring optimal presentation across all interface
               layouts.
             </li>
-            <li>
+            <li id="desc">
               With these enhanced functionalities, our Popover Component sets a
               new standard for user-centric design, focusing on simplicity and
               efficiency.Users can now enjoy a more fluid and personalized
@@ -191,7 +197,7 @@ const PopoverDocs = ({ theme, settheme }) => {
             </li>
           </ul>
 
-          <div className="variant1">
+          <div className="variant1 mx-auto">
             <div className="render">
               <div className="nav-up">
                 <Popover />
@@ -208,7 +214,7 @@ const PopoverDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={basic}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div id="popover">
   <span id="popovertext">Sample Popover Text</span>
   <button id="popoverhover">Hover Me</button>
@@ -218,7 +224,7 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
             </div>
           </div>
-          <div className="variant2">
+          <div className="variant2 mx-auto">
             <div className="render">
               <div className="nav-up">
                 <Popover2 />
@@ -235,7 +241,7 @@ const PopoverDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={direction}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="alldirection-popover">
 <div>
   <span tooltip="I'm up above it!">Up</span>
@@ -253,7 +259,7 @@ const PopoverDocs = ({ theme, settheme }) => {
               </div>
             </div>
           </div>
-          <div className="variant3">
+          <div className="variant3 mx-auto">
             <div className="render">
               <div className="nav-up">
                 <Popover3 />
@@ -270,39 +276,41 @@ const PopoverDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down">
                 <pre ref={profile}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="popover-container">
-<button class="user-profile-button" data-popover-target="popover-user-profile">User profile</button>
+<button class="user-profile-button" data-popover-target="popover-user-profile">
+User profile</button>
 
 <div id="popover-user-profile" class="popover" role="tooltip">
-    <div class="popover-content">
-        <div class="popover-header">
-            <a href="#">
-                <img class="profile-picture" src="#" alt="Jese Leos">
-            </a>
-            <div>
-                <button class="follow-button">Follow</button>
-            </div>
-        </div>
-        <p class="user-name"><a href="#">Jese Leos</a></p>
-        <p class="user-handle"><a href="#">@jeseleos</a></p>
-        <p class="user-bio">Open-source contributor. Building <a href="#" class="user-link">flowbite.com</a>.</p>
-        <ul class="user-stats">
-            <li>
-                <a href="#">
-                    <span class="stat-number">799</span>
-                    <span>Following</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="stat-number">3,758</span>
-                    <span>Followers</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="popover-arrow"></div>
+  <div class="popover-content">
+      <div class="popover-header">
+          <a href="#">
+              <img class="profile-picture" src="#" alt="Jese Leos">
+          </a>
+          <div>
+              <button class="follow-button">Follow</button>
+          </div>
+      </div>
+      <p class="user-name"><a href="#">Jese Leos</a></p>
+      <p class="user-handle"><a href="#">@jeseleos</a></p>
+      <p class="user-bio">Open-source contributor. Building 
+      <a href="#" class="user-link">flowbite.com</a>.</p>
+      <ul class="user-stats">
+          <li>
+              <a href="#">
+                  <span class="stat-number">799</span>
+                  <span>Following</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <span class="stat-number">3,758</span>
+                  <span>Followers</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+  <div class="popover-arrow"></div>
 </div>
 </div>`}
                   </code>

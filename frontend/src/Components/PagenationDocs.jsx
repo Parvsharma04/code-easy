@@ -29,7 +29,7 @@ const PagenationDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
@@ -37,30 +37,35 @@ const PagenationDocs = ({ theme, settheme }) => {
           }`}
         />
         <div
-          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
+          className={`p-5 w-full navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
           <div className={`heading`}>
             <h1
               id="title"
               className={`${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
+              } flex justify-center items-center w-full`}
             >
               Pagenation
             </h1>
-            <p>
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
               A pagination component in Bootstrap is a navigational element used
               to divide content into discrete pages, allowing users to navigate
               between these pages easily. It provides a structured and
               user-friendly interface for accessing different sections of
               content
-            </p>
+            </h2>
           </div>
           <div className="description w-fit">
-            <h2 className="mb-1">How it works ?</h2>
-            <ul>
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              How it works ?
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <li id="desc">
                 For using a pagenation you are required to wrap all the elements
                 in the div under the class name 'pagenation' for responsiveness
@@ -81,10 +86,14 @@ const PagenationDocs = ({ theme, settheme }) => {
             </ul>
           </div>
 
-          <div className="variant1 mb-5 w-fit">
-            <h2 className="mb-1">Navigating Brilliance</h2>
-            <p>Swiftly flip through content with our dynamic pagination</p>
-            <ul className="w-fit">
+          <div className="variant1 mt-2 mb-2">
+            <h2 className="flex text-justify w-full sm:text-xl md:text-2xl">
+              Navigating Brilliance
+            </h2>
+            <h2 className="flex text-justify w-full sm:text-md md:text-xl mt-2 mb-3">
+              Swiftly flip through content with our dynamic pagination
+            </h2>
+            <ul className="flex flex-col text-justify ml-4">
               <h3>Primary Navigation Section:</h3>
               <li>
                 .pagenation: Represents the container in which whole pagenation
@@ -107,10 +116,9 @@ const PagenationDocs = ({ theme, settheme }) => {
                   Finally, it updates the HTML content of the pagination
                   container with the generated buttons.
                 </p>
-
               </li>
             </ul>
-            <div className="render w-fit">
+            <div className="render mx-auto">
               <div className="nav-up w-fit">
                 <Pagenation />
               </div>
@@ -123,7 +131,7 @@ const PagenationDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down w-fit">
                 <pre ref={codeRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<div class="pagination">
         <ul> <!--pages or li are comes from javascript --> </ul>
       </div>`}

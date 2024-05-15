@@ -12,6 +12,9 @@
   color: black;
   background-color: gainsboro;
 }
+.ais-SearchBox-input::placeholder {
+  color: black;
+}
 .ais-SearchBox-submitIcon {
   width: 20px;
   height: 20px;

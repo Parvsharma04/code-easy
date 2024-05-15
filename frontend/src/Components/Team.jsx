@@ -41,13 +41,13 @@ const Team = ({ theme, settheme }) => {
               <h3>Aryan Kaushik</h3>
               <p>Front-End Designer</p>
               <div className="icons">
-                <a href="">
+                <a href="https://www.linkedin.com/in/aryan-kaushik-087930260/">
                   <LinkedInIcon />
                 </a>
-                <a href="">
+                <a href="https://github.com/aryankaushik5565">
                   <GitHubIcon />
                 </a>
-                <a href="">
+                <a href="mailto:@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you.">
                   <EmailIcon />
                 </a>
                 <a href="">
@@ -68,16 +68,16 @@ const Team = ({ theme, settheme }) => {
               <h3>Aditya Sharma</h3>
               <p>Front-End Designer</p>
               <div className="icons">
-                <a href="">
+                <a href="https://www.linkedin.com/in/aditya-sharma-651084253/">
                   <LinkedInIcon />
                 </a>
-                <a href="">
+                <a href="https://github.com/Adityasharma2905">
                   <GitHubIcon />
                 </a>
-                <a href="">
+                <a href="mailto:adityasharma.as02@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you.">
                   <EmailIcon />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/adityasharma_.04/">
                   <InstagramIcon />
                 </a>
               </div>
@@ -95,16 +95,16 @@ const Team = ({ theme, settheme }) => {
               <h3>Parv Sharma</h3>
               <p>Back-End Designer</p>
               <div className="icons">
-                <a href="">
+                <a href="https://www.linkedin.com/in/parv-sharma-470498259/">
                   <LinkedInIcon />
                 </a>
-                <a href="">
+                <a href="https://github.com/Parvsharma04">
                   <GitHubIcon />
                 </a>
-                <a href="">
+                <a href="mailto:sharmaparv.2004@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you.">
                   <EmailIcon />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/parv04/">
                   <InstagramIcon />
                 </a>
               </div>
@@ -122,16 +122,16 @@ const Team = ({ theme, settheme }) => {
               <h3>Arshdeep</h3>
               <p>Back-End Designer</p>
               <div className="icons">
-                <a href="">
+                <a href="https://www.linkedin.com/in/arshdeeprooprai">
                   <LinkedInIcon />
                 </a>
-                <a href="">
+                <a href="https://github.com/Arshdeep-13">
                   <GitHubIcon />
                 </a>
-                <a href="">
+                <a href="mailto:arshdeeprooprai@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you.">
                   <EmailIcon />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/arshdeep_1315/">
                   <InstagramIcon />
                 </a>
               </div>

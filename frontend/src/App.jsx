@@ -11,6 +11,7 @@ import AccordianDocs from "./Components/AccordianDocs";
 import LandingPage from "./Components/LandingPage";
 import SpinnerDocs from "./Components/SpinnerDocs";
 import PopoverDocs from "./Components/PopoverDocs";
+import PagenationDocs from "./Components/PagenationDocs"
 
 const App = () => {
   const current_theme = localStorage.getItem("current_theme");
@@ -28,6 +29,9 @@ const App = () => {
   const isAuthenticated = sessionStorage.getItem("isAuthenticated");
 
   return (
+   
+     
+   
     <div className={`${theme}`}>
       <Routes>
         <Route
@@ -75,6 +79,10 @@ const App = () => {
         <Route
           path="/framework/popover"
           element={<PopoverDocs theme={theme} settheme={settheme} />}
+        />
+        <Route
+          path="/framework/pagenation"
+          element={<PagenationDocs theme={theme} settheme={settheme} />}
         />
       </Routes>
     </div>

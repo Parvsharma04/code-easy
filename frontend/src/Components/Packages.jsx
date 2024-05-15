@@ -9,7 +9,7 @@ import img4 from "../assets/codeeasy.jpg";
 const Packages = ({ theme, settheme }) => {
   return (
     <>
-      <Navbar theme={theme} settheme={settheme} />
+      <Navbar theme={theme} settheme={settheme} />    
       <div
         className={`absolute w-full mt-20 h-full ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"

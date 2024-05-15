@@ -81,6 +81,14 @@ export const Sidebar = ({ theme, setTheme }) => {
         >
           Popover
         </a>
+        <a
+          href="/framework/pagenation"
+          className={`flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group ${
+            theme === "dark" ? "text-white" : ""
+          }`}
+        >
+          Pagenation
+        </a>
        
       
        

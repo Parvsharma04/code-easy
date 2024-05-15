@@ -57,7 +57,7 @@ const Navbar = ({ theme, settheme }) => {
   const [query, setQuery] = useState(""); // State to hold the search query
 
   return (
-    <div className="absolute top-0 navbar z-50 h-20 flex">
+    <div className="navbar z-50 h-20 flex">
       <div className="left">
         <a href="/">
           <img src={siteLogo} alt="Codeeasy" />

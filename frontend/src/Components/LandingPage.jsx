@@ -9,7 +9,7 @@ const LandingPage = ({ theme, settheme }) => {
     <>
       <Navbar theme={theme} settheme={settheme} />
       <section
-        className={`fixed flex items-center justify-between p-8 m-auto w-full h-full ${
+        className={`flex items-center justify-between ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
         }`}
       >

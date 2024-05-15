@@ -29,7 +29,7 @@ const Framework = ({ theme, settheme }) => {
   return (
     <div className="block framework w-full h-full">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
@@ -37,14 +37,14 @@ const Framework = ({ theme, settheme }) => {
           }`}
         />
         <div
-          className={`w-2/3 flex flex-col flex-wrap ${
+          className={`w-1/2 md:w-3/4 flex flex-col flex-wrap ${
             theme === "dark"
               ? "bg-gray-800 text-white"
               : "bg-gray-50 text-black"
           }`}
         >
           <h1
-            className={`lg:text-2xl mt-2 text-xl ${
+            className={`text-md md:text-2xl mt-2   ${
               theme === "dark"
                 ? "bg-gray-800 text-white"
                 : "bg-gray-50 text-black"
@@ -77,7 +77,7 @@ const Framework = ({ theme, settheme }) => {
               <hr />
               <code
                 ref={codeRefCss}
-                className="down flex justify-center text-md flex-wrap break-words"
+                className="down flex justify-center text-md flex-wrap break-words text-sm md:text-xl"
                 style={{
                   wordBreak: "break-all",
                 }}
@@ -108,7 +108,7 @@ const Framework = ({ theme, settheme }) => {
               <hr />
               <code
                 ref={codeRefJs}
-                className="down flex justify-center text-md flex-wrap break-words"
+                className="down flex justify-center text-md flex-wrap break-words text-sm md:text-xl"
                 style={{
                   wordBreak: "break-all",
                 }}

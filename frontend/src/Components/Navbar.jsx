@@ -82,7 +82,7 @@ const Navbar = ({ theme, settheme }) => {
           </a>
         </ul>
       </div>
-      <div className="right">
+      <div className="right sm:flex flex-col sm:flex-wrap md:flex-nowrap md:flex-row">
         <div>
           <InstantSearch searchClient={searchClient} indexName="codeEasy">
             <SearchBox
@@ -102,15 +102,17 @@ const Navbar = ({ theme, settheme }) => {
             )}
           </InstantSearch>
         </div>
-        <Login theme={theme} settheme={settheme} />
-        <img
-          onClick={() => {
-            toggle_mode();
-          }}
-          src={theme === "light" ? toggle_light : togggle_dark}
-          alt=""
-          className="toggle-icon ml-2"
-        />
+        <div className="flex justify-center items-center mt-2 mb-2">
+          <Login theme={theme} settheme={settheme} />
+          <img
+            onClick={() => {
+              toggle_mode();
+            }}
+            src={theme === "light" ? toggle_light : togggle_dark}
+            alt=""
+            className="toggle-icon ml-2"
+          />
+        </div>
       </div>
 
       <div className="hamburger w-6">

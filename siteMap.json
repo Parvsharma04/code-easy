@@ -82,5 +82,12 @@
     "path": "/framework/popover",
     "component": "Popover",
     "links": "https://code-easy.vercel.app/framework/popover"
+  },
+  {
+    "name": "Pagenation",
+    "id": 13,
+    "path": "/framework/pagenation",
+    "component": "Popover",
+    "links": "https://code-easy.vercel.app/framework/pagenation"
   }
 ]

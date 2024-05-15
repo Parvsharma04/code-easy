@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Home",
+    "id": 1,
+    "path": "/",
+    "component": "Home",
+    "link": "https://code-easy.vercel.app/"
+  },
+  {
+    "name": "Team",
+    "id": 2,
+    "path": "/team",
+    "component": "Team",
+    "links": "https://code-easy.vercel.app/team"
+  },
+  {
+    "name": "Packages",
+    "id": 3,
+    "path": "/packages",
+    "component": "Packages",
+    "links": "https://code-easy.vercel.app/packages"
+  },
+  {
+    "name": "Contact",
+    "id": 4,
+    "path": "/contact",
+    "component": "Contact",
+    "links": "https://code-easy.vercel.app/contact"
+  },
+  {
+    "name": "Register",
+    "id": 5,
+    "path": "/register",
+    "component": "Register",
+    "links": "https://code-easy.vercel.app/register"
+  },
+  {
+    "name": "Framework",
+    "id": 6,
+    "path": "/framework",
+    "component": "Framework",
+    "links": "https://code-easy.vercel.app/framework"
+  },
+  {
+    "name": "Navbar",
+    "id": 7,
+    "path": "/framework/navbar",
+    "component": "Navbar",
+    "links": "https://code-easy.vercel.app/framework/navbar"
+  },
+  {
+    "name": "Form",
+    "id": 8,
+    "path": "/framework/form",
+    "component": "Form",
+    "links": "https://code-easy.vercel.app/framework/form"
+  },
+  {
+    "name": "Progressbar",
+    "id": 9,
+    "path": "/framework/progressbar",
+    "component": "Progressbar",
+    "links": "https://code-easy.vercel.app/framework/progressbar"
+  },
+  {
+    "name": "Accordian",
+    "id": 10,
+    "path": "/framework/accordian",
+    "component": "Accordian",
+    "links": "https://code-easy.vercel.app/framework/accordian"
+  },
+  {
+    "name": "Spinners",
+    "id": 11,
+    "path": "/framework/spinners",
+    "component": "Spinners",
+    "links": "https://code-easy.vercel.app/framework/spinners"
+  },
+  {
+    "name": "Popover",
+    "id": 12,
+    "path": "/framework/popover",
+    "component": "Popover",
+    "links": "https://code-easy.vercel.app/framework/popover"
+  }
+]

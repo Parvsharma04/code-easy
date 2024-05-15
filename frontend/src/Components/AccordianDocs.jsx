@@ -32,7 +32,7 @@ const AccordianDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
@@ -40,9 +40,12 @@ const AccordianDocs = ({ theme, settheme }) => {
           }`}
         />
         <div
-          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
+          className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
           <div className="heading">
             <h1

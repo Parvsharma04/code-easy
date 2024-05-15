@@ -4,7 +4,7 @@ const Footer = ({ theme, settheme }) => {
   return (
     <>
       <footer
-        className={`absolute bottom-0 w-full text-black-600 body-font h-20 ${
+        className={`w-full text-black-600 body-font h-20 ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
         }`}
       >

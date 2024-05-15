@@ -5,11 +5,11 @@ import "react-resizable/css/styles.css";
 export const Sidebar = ({ theme, setTheme }) => {
   return (
     <div
-      className={`w-1/3 top-20 ${
+      className={`w-1/2 md:w-1/4 top-20 ${
         theme === "dark" ? "bg-gray-800" : "bg-gray-50"
       } border-r border-gray-200 sidebar `}
     >
-      <div className="mb-10 mt-10 flex justify-center items-center quickContainer">
+      {/* <div className="mb-10 mt-10 flex justify-center items-center quickContainer">
         <input
           type="text"
           className={`rounded quickSearch responsiveSearch h-11 pl-3 w-44 ${
@@ -26,9 +26,9 @@ export const Sidebar = ({ theme, setTheme }) => {
         >
           Search
         </button>
-      </div>
+      </div> */}
 
-      <div className="mb-10 text-lg flex justify-center items-start flex-col">
+      <div className="mb-10 mt-10 text-lg flex justify-center items-start flex-col">
         <h3 className="mx-6 mb-2 text-xs text-gray-400 uppercase tracking-widest">
           Components
         </h3>
@@ -81,6 +81,7 @@ export const Sidebar = ({ theme, setTheme }) => {
         >
           Popover
         </a>
+<<<<<<< HEAD
         <a
           href="/framework/pagenation"
           className={`flex items-center px-6 py-2.5 text-gray-500 hover:text-orange-600 group ${
@@ -94,6 +95,8 @@ export const Sidebar = ({ theme, setTheme }) => {
        
         
        
+=======
+>>>>>>> 0dc7c2b5c97d97f14f500d262f5bf7b136e63554
       </div>
     </div>
   );

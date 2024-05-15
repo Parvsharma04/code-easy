@@ -1,0 +1,30 @@
+.ais-InstantSearch__root {
+  display: flex;
+}
+.ais-SearchBox-form {
+  flex-direction: row;
+}
+.ais-SearchBox-input {
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 15px;
+  font-size: large;
+  color: black;
+  background-color: gainsboro;
+}
+.ais-SearchBox-submitIcon {
+  width: 20px;
+  height: 20px;
+  top: 30px;
+  right: 292px;
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .ais-SearchBox-input {
+    padding: 3px;
+  }
+  .right {
+    width: max-content;
+  }
+}

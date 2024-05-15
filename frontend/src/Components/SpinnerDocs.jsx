@@ -6,7 +6,7 @@ import { Sidebar } from "./Sidebar";
 import Spinners from "../FrameworkComponent/Spinner1";
 import Spinners2 from "../FrameworkComponent/Spinner2";
 import Shapespinners from "../FrameworkComponent/Spinner3";
-import Footer from './Footer'
+import Footer from "./Footer";
 
 const SpinnerDocs = ({ theme, settheme }) => {
   const basic = useRef();
@@ -38,8 +38,8 @@ const SpinnerDocs = ({ theme, settheme }) => {
             theme === "light" ? "text-black" : "text-white"
           }`}
         />
-         <div
-          className={`p-5 w-2/3 navDiv overflow-y-scroll flex flex-wrap ${
+        <div
+          className={`p-5 w-3/4 navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
         >
@@ -186,7 +186,10 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(basic)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(basic)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -207,7 +210,10 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(multicolor)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(multicolor)}
+                >
                   Copy to Clipboard
                 </button>
               </div>
@@ -230,7 +236,10 @@ const SpinnerDocs = ({ theme, settheme }) => {
               </div>
               <hr />
               <div className="type">
-                <button className="copy-btn" onClick={()=>handleCopyToClipboard(shapespinner)}>
+                <button
+                  className="copy-btn"
+                  onClick={() => handleCopyToClipboard(shapespinner)}
+                >
                   Copy to Clipboard
                 </button>
               </div>

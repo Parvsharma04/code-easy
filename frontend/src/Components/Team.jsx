@@ -21,7 +21,7 @@ const Team = ({ theme, settheme }) => {
       >
         <div className="row">
           <h1
-            className={`font-extrabold text-5xl pt-1 ${
+            className={`font-extrabold text-4xl md:text-5xl pt-1 ${
               theme === "dark" ? "bg-black text-white" : "bg-white text-black"
             }`}
           >

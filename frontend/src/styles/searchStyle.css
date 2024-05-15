@@ -18,3 +18,12 @@
   right: 292px;
   display: none;
 }
+
+@media screen and (max-width: 400px) {
+  .ais-SearchBox-input {
+    padding: 3px;
+  }
+  .right {
+    width: max-content;
+  }
+}

@@ -9,15 +9,16 @@ import aditya_img from "../assets/aditya_img.jpg";
 import arsh_img from "../assets/arsh_img.jpg";
 import parv_img from "../assets/parv_img.jpg";
 import aryan_img from "../assets/aryan_img.jpg";
+import Footer from "./Footer";
 
 const Team = ({ theme, settheme }) => {
   return (
     <>
       <Navbar theme={theme} settheme={settheme} />
       <section
-        className={`absolute w-full mt-20 h-full ${
+        className={`w-full ${
           theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-        }`}
+        } h-max`}
       >
         <div className="row">
           <h1
@@ -139,6 +140,7 @@ const Team = ({ theme, settheme }) => {
           </div>
         </div>
       </section>
+      <Footer theme={theme} settheme={settheme} />
     </>
   );
 };

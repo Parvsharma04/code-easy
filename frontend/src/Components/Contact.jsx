@@ -82,7 +82,10 @@ const Contact = ({ theme, settheme }) => {
       />
       <Navbar theme={theme} settheme={settheme} />
       <section
-        className={`body-font flex justify-center items-center h-screen relative ${themeClass}`}
+        style={{
+          height: "80vh",
+        }}
+        className={`flex justify-center items-center ${themeClass}`}
       >
         <div className="container mx-auto my-auto">
           <div className="flex flex-col text-center w-full mb-12">

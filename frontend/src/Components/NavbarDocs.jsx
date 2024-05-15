@@ -28,7 +28,7 @@ const NavbarDocs = ({ theme, settheme }) => {
   return (
     <div className="framework">
       <Navbar theme={theme} settheme={settheme} />
-      <div className="w-full flex flex-row mt-20 fixed">
+      <div className="w-full flex flex-row">
         <Sidebar theme={theme} settheme={settheme} />
         <hr
           className={`h-full w-1 ${
@@ -39,6 +39,9 @@ const NavbarDocs = ({ theme, settheme }) => {
           className={`p-5 w-full navDiv overflow-y-scroll flex flex-wrap ${
             theme === "dark" ? "bg-black text-white" : "bg-white text-black"
           }`}
+          style={{
+            scrollbarWidth: "none",
+          }}
         >
           <div className={`heading`}>
             <h1
@@ -224,7 +227,7 @@ const NavbarDocs = ({ theme, settheme }) => {
               <hr />
               <div className="down w-fit">
                 <pre ref={codeRef}>
-                  <code>
+                  <code className=" text-sm md:text-xl">
                     {`<nav id="nav-container">
 <div class="primary-nav">
   <div class="primary-nav-logo">

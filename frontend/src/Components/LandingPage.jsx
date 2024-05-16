@@ -3,8 +3,21 @@ import bannerImage from "../assets/bannerImage.svg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import "../styles/landing.css";
+import introJs from "intro.js";
+import { useEffect } from "react";
 
 const LandingPage = ({ theme, settheme }) => {
+  const getDemo = () => {
+    let aiDiv = document.getElementById("aichatbot-widget-button");
+    aiDiv.setAttribute("data-step", "6");
+    aiDiv.setAttribute(
+      "data-intro",
+      "Ask any query to codeEasy AI and Enjoy the website !!!"
+    );
+
+    introJs().setOptions("showProgress", true).start();
+  };
+
   return (
     <>
       <Navbar theme={theme} settheme={settheme} />
@@ -45,8 +58,10 @@ const LandingPage = ({ theme, settheme }) => {
                   development journey effortlessly.
                 </div>
               </div>
-              <div className="flex flex-row items-start justify-start py-0 pr-0 pl-[5px]">
+              <div className="flex flex-row items-center justify-center md:justify-between py-0 pr-0 pl-[5px] w-52">
                 <button
+                  data-step="4"
+                  data-intro="Click here to get started with the framework"
                   style={{ backgroundColor: "#e53935" }}
                   className="rounded cursor-pointer [border:none] pt-2.5 pb-3 pr-[7px] pl-[13px] bg-orangered-100 rounded-77xl flex flex-row items-center justify-end mix-blend-normal whitespace-nowrap hover:bg-orangered-200"
                 >
@@ -57,6 +72,17 @@ const LandingPage = ({ theme, settheme }) => {
                     className="relative text-base-1 leading-[16px] font-medium font-inter text-black text-left"
                   >
                     Get Started
+                  </div>
+                </button>
+                <button
+                  style={{ backgroundColor: "#e53935" }}
+                  className="hidden md:flex rounded cursor-pointer [border:none] pt-2.5 pb-3 pr-[7px] pl-[13px] bg-orangered-100 rounded-77xl flex-row items-center justify-end mix-blend-normal whitespace-nowrap hover:bg-orangered-200"
+                >
+                  <div
+                    onClick={() => getDemo()}
+                    className="relative text-base-1 leading-[16px] font-medium font-inter text-black text-left"
+                  >
+                    Get Demo
                   </div>
                 </button>
               </div>

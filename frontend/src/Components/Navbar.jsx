@@ -9,6 +9,7 @@ import Login from "./Login";
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
 import "../styles/searchStyle.css";
+import introJs from "intro.js";
 
 function Hit({ hit }) {
   return (
@@ -22,6 +23,9 @@ function Hit({ hit }) {
 }
 
 const Navbar = ({ theme, settheme }) => {
+  // useEffect(() => {
+  //   introJs().setOptions("showProgress", true).start();
+  // }, []);
   const toggle_mode = () => {
     theme === "light" ? settheme("dark") : settheme("light");
   };
@@ -65,7 +69,11 @@ const Navbar = ({ theme, settheme }) => {
       }}
       id="navbar"
     >
-      <div className="left">
+      <div
+        className="left"
+        data-step="1"
+        data-intro="Important links to navigate"
+      >
         <a href="/">
           <img src={siteLogo} alt="Codeeasy" />
         </a>
@@ -94,7 +102,7 @@ const Navbar = ({ theme, settheme }) => {
         </ul>
       </div>
       <div className="right sm:flex flex-col sm:flex-wrap md:flex-nowrap md:flex-row">
-        <div>
+        <div data-step="2" data-intro="search any component here">
           <InstantSearch searchClient={searchClient} indexName="codeEasy">
             <SearchBox
               className="ais-InstantSearch__root"
@@ -113,7 +121,11 @@ const Navbar = ({ theme, settheme }) => {
             )}
           </InstantSearch>
         </div>
-        <div className="flex justify-center items-center mt-2 mb-2">
+        <div
+          data-step="3"
+          data-intro="Login to access new feature, save your progress and use toggle to change theme"
+          className="flex justify-center items-center mt-2 mb-2"
+        >
           <Login theme={theme} settheme={settheme} />
           <img
             onClick={() => {

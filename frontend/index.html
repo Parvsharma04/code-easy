@@ -9,6 +9,7 @@
       rel="icon"
       href="src/assets/siteIcon.png"
     />
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/introjs.css" />
     <title>Codeeasy</title>
     <style>
       body {
@@ -19,12 +20,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://unpkg.com/intro.js/intro.js"></script>
     <script>
       !(function (w, d, s, ...args) {
         var div = d.createElement("div");
         div.id = "aichatbot";
         d.body.appendChild(div);
         w.chatbotConfig = args;
+
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s);
         j.defer = true;

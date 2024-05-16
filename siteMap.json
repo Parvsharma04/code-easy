@@ -87,7 +87,7 @@
     "name": "Pagenation",
     "id": 13,
     "path": "/framework/pagenation",
-    "component": "Popover",
+    "component": "Pagenation",
     "links": "https://code-easy.vercel.app/framework/pagenation"
   }
 ]
